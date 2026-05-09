@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pic/maa_sharda_college (1).jpg">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ================= GLOBAL ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#060b16;
+  color:white;
+  overflow-x:hidden;
+  position:relative;
+}
+
+/* ================= BACKGROUND GLOW ================= */
+body::before{
+  content:"";
+  position:fixed;
+  width:650px;
+  height:650px;
+  background:linear-gradient(45deg,#ff7a00,#ff3cac);
+  filter:blur(180px);
+  opacity:0.22;
+  top:-220px;
+  left:-220px;
+  z-index:-2;
+}
+
+body::after{
+  content:"";
+  position:fixed;
+  width:500px;
+  height:500px;
+  background:#ff3cac;
+  filter:blur(180px);
+  opacity:0.15;
+  bottom:-180px;
+  right:-180px;
+  z-index:-2;
+}
+
+/* ================= SECTION ================= */
+.about-section{
+  max-width:1300px;
+  margin:90px auto;
+  padding:20px;
+  position:relative;
+}
+
+/* ================= TITLE ================= */
+.title{
+  text-align:center;
+  font-size:55px;
+  font-weight:800;
+  margin-bottom:20px;
+  background:linear-gradient(90deg,#ff7a00,#ff3cac);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  letter-spacing:1px;
+}
+
+.subtitle{
+  text-align:center;
+  max-width:850px;
+  margin:0 auto 70px;
+  color:#cbd5e1;
+  line-height:1.9;
+  font-size:16px;
+}
+
+/* ================= WRAPPER ================= */
+.wrapper{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+
+/* ================= IMAGE SIDE ================= */
+.left{
+  position:relative;
+}
+
+.left::before{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  border-radius:35px;
+  background:linear-gradient(135deg,#ff7a00,#ff3cac);
+  top:18px;
+  left:18px;
+  opacity:0.25;
+  z-index:-1;
+}
+
+.left img{
+  width:100%;
+  border-radius:35px;
+  object-fit:cover;
+  border:2px solid rgba(255,255,255,0.12);
+  transition:0.6s;
+  box-shadow:
+  0 0 40px rgba(255,122,0,0.25),
+  0 0 70px rgba(255,60,172,0.15);
+}
+
+/* hover effect */
+.left:hover img{
+  transform:scale(1.04) rotate(-1deg);
+  box-shadow:
+  0 0 60px rgba(255,122,0,0.4),
+  0 0 100px rgba(255,60,172,0.3);
+}
+
+/* floating badge */
+.badge{
+  position:absolute;
+  bottom:25px;
+  left:25px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,0.12);
+  padding:18px 24px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.badge h3{
+  font-size:30px;
+  background:linear-gradient(90deg,#ff7a00,#ff3cac);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.badge p{
+  color:#e2e8f0;
+  font-size:14px;
+}
+
+/* ================= RIGHT SIDE ================= */
+.right{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(22px);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:35px;
+  padding:45px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* animated border */
+.right::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  padding:2px;
+  border-radius:35px;
+  background:linear-gradient(135deg,#ff7a00,#ff3cac);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+}
+
+/* heading */
+.right h2{
+  font-size:40px;
+  margin-bottom:20px;
+  line-height:1.2;
+  background:linear-gradient(90deg,#ff7a00,#ff3cac);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* text */
+.right p{
+  color:#cbd5e1;
+  line-height:2;
+  margin-bottom:18px;
+  font-size:15px;
+}
+
+/* button */
+.btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:14px 32px;
+  border-radius:40px;
+  text-decoration:none;
+  color:white;
+  font-weight:600;
+  background:linear-gradient(90deg,#ff7a00,#ff3cac);
+  transition:0.5s;
+  box-shadow:0 0 25px rgba(255,122,0,0.35);
+}
+
+.btn:hover{
+  transform:translateY(-5px) scale(1.05);
+  box-shadow:
+  0 0 35px rgba(255,122,0,0.5),
+  0 0 35px rgba(255,60,172,0.4);
+}
+
+/* ================= FEATURE CARDS ================= */
+.cards_1{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  margin-top:90px;
+}
+
+.card_1{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:30px;
+  padding:35px 25px;
+  text-align:center;
+  transition:0.5s;
+  position:relative;
+  overflow:hidden;
+}
+
+/* glow effect */
+.card_1::before{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  background:linear-gradient(45deg,#ff7a00,#ff3cac);
+  border-radius:50%;
+  top:-90px;
+  right:-90px;
+  opacity:0.15;
+}
+
+/* hover */
+.card_1:hover{
+  transform:translateY(-15px) scale(1.03);
+  box-shadow:
+  0 0 35px rgba(255,122,0,0.35),
+  0 0 35px rgba(255,60,172,0.35);
+}
+
+/* icon */
+.card_1 i{
+  width:75px;
+  height:75px;
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:auto;
+  margin-bottom:20px;
+  font-size:28px;
+  background:linear-gradient(135deg,#ff7a00,#ff3cac);
+  box-shadow:0 0 25px rgba(255,122,0,0.35);
+}
+
+/* card text */
+.card_1 h3{
+  margin-bottom:12px;
+  font-size:24px;
+}
+
+.card_1 p{
+  color:#cbd5e1;
+  line-height:1.8;
+  font-size:14px;
+}
+
+/* ================= ANIMATION ================= */
+.fade{
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.8s ease;
+}
+
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:950px){
+
+.wrapper{
+  grid-template-columns:1fr;
+}
+
+.right h2{
+  font-size:34px;
+}
+
+}
+
+@media(max-width:600px){
+
+.title{
+  font-size:38px;
+}
+
+.subtitle{
+  font-size:14px;
+}
+
+.right{
+  padding:30px 22px;
+}
+
+.right h2{
+  font-size:28px;
+}
+
+.badge{
+  padding:14px 18px;
+}
+
+.badge h3{
+  font-size:22px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- ================= TOP HEADER ================= -->
+<div class="top-header">
+  <div class="top-left">
+    <span>
+      <i class="fa-solid fa-phone"></i>
+      +91 9454700744
+    </span>
+    <span>
+      <i class="fa-solid fa-envelope"></i>
+      maashardacollegeofnursing@gmail.com
+    </span>
+  </div>
+  <div class="top-social">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</div>
+<!-- ================= MAIN HEADER ================= -->
+<div class="header">
+  <!-- LOGO -->
+  <div class="logo-box_1">
+    <img src="pic/Maa_Sharda_College_Of_Nursing_Allahabad png.png" alt="Logo">
+  </div>
+  <!-- TITLE -->
+  <div class="title">
+    <h1>
+      Maa Sharda College Of Nursing <br>
+      & Paramedical Science
+    </h1>
+    <h2>
+      Government Institute Of Medical Sciences
+    </h2>
+  </div>
+  <!-- BADGE -->
+  <div class="right-badge">
+    <div class="badge-box">
+      <h3>Admission Open</h3>
+      <p>Session 2026-27</p>
+    </div>
+  </div>
+</div>
+<!-- ================= NAVBAR ================= -->
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg">
+<div class="container-fluid">
+<a class="navbar-brand" href="#">
+  <i class="fa-solid fa-graduation-cap"></i>
+  Maa Sharda
+</a>
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="index.html">
+<i class="fa-solid fa-house"></i>
+Home
+</a>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle"
+href="#"
+role="button"
+data-bs-toggle="dropdown">
+<i class="fa-solid fa-user-graduate"></i>
+About
+</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="about us.html">
+About Us
+</a>
+</li>
+<li>
+<a class="dropdown-item" href="news update.html">
+News Update
+</a>
+</li>
+<li>
+<a class="dropdown-item" href="Gallery.html">
+Gallery
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle"
+href="#"
+role="button"
+data-bs-toggle="dropdown">
+<i class="fa-solid fa-user-graduate"></i>
+Admissions
+</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="Associated Hospitals.html">
+Associated hospital 
+</a>
+</li>
+<li>
+<a class="dropdown-item" href="ragistration form.html">
+Admission Form
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="Facilities.html">
+<i class="fa-solid fa-book"></i>
+facility
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="course.html">
+<i class="fa-solid fa-laptop-medical"></i>
+Courses
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="Contact Us.html">
+<i class="fa-solid fa-address-book"></i>
+Contact
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+
+
+
+
+
+  <!-- ------------------------------------------------------------------------------------------- -->
+<section class="about-section">
+
+  <!-- TITLE -->
+  <h1 class="title fade">About Our College</h1>
+
+  <p class="subtitle fade">
+    We are committed to providing quality nursing education, modern practical training,
+    and professional healthcare experience with advanced learning facilities.
+  </p>
+
+  <!-- MAIN WRAPPER -->
+  <div class="wrapper">
+
+    <!-- IMAGE -->
+    <div class="left fade">
+
+      <img src="pic/maa_sharda_college (1).jpg" alt="About Image">
+
+      <div class="badge">
+        <h3>10+</h3>
+        <p>Years of Excellence</p>
+      </div>
+
+    </div>
+
+    <!-- CONTENT -->
+    <div class="right fade">
+
+      <h2>Welcome To Our Nursing Institute</h2>
+
+      <p>
+        Our institute is dedicated to delivering high-quality nursing education with
+        modern infrastructure, experienced faculty, and advanced clinical training.
+      </p>
+
+      <p>
+        We provide practical exposure through associated hospitals, smart laboratories,
+        digital classrooms, and real healthcare environments.
+      </p>
+
+      <p>
+        Our mission is to prepare confident healthcare professionals with professional
+        ethics, practical knowledge, and excellent patient care skills.
+      </p>
+
+      <a href="#" class="btn">Explore More</a>
+
+    </div>
+
+  </div>
+
+  <!-- FEATURE CARDS -->
+  <div class="cards_1">
+
+    <div class="card_1 fade">
+
+      <i class="fa-solid fa-user-doctor"></i>
+
+      <h3>Expert Faculty</h3>
+
+      <p>
+        Highly experienced teachers and healthcare professionals providing quality education.
+      </p>
+
+    </div>
+
+    <div class="card_1 fade">
+
+      <i class="fa-solid fa-hospital"></i>
+
+      <h3>Hospital Training</h3>
+
+      <p>
+        Practical clinical exposure in associated hospitals with real patient interaction.
+      </p>
+
+    </div>
+
+    <div class="card_1 fade">
+
+      <i class="fa-solid fa-book-open"></i>
+
+      <h3>Modern Learning</h3>
+
+      <p>
+        Smart classrooms, digital labs, and updated medical education systems.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ============================================================== -->
+
+
+<footer class="footer">
+
+  <!-- TOP LINE -->
+  <div class="footer-top-line"></div>
+
+  <!-- GRID -->
+  <div class="footer-grid"></div>
+
+  <!-- OVERLAY -->
+  <div class="footer-overlay"></div>
+
+  <!-- BLUR EFFECT -->
+  <div class="footer-blur blur1"></div>
+  <div class="footer-blur blur2"></div>
+  <div class="footer-blur blur3"></div>
+
+  <!-- PARTICLES -->
+  <div class="footer-particles">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </div>
+
+  <!-- CONTAINER -->
+  <div class="footer-container">
+
+    <!-- ABOUT -->
+    <div class="footer-box">
+
+      <h3>
+        <i class="fa-solid fa-hospital"></i>
+        About College
+      </h3>
+
+      <p>
+        We provide quality education and professional healthcare training at
+        Maa Sharda College of Nursing & Para Medical Sciences since 2013.
+        With experienced faculty, modern labs, practical exposure and a
+        green campus environment.
+      </p>
+
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-box">
+
+      <h3>
+        <i class="fa-solid fa-link"></i>
+        Quick Links
+      </h3>
+
+      <ul class="footer-links">
+
+        <li>
+          <a href="index.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="about us.html">
+            <i class="fa-solid fa-angle-right"></i>
+            About Us
+          </a>
+        </li>
+
+        <li>
+          <a href="course.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Courses
+          </a>
+        </li>
+
+        <li>
+          <a href="ragistration form.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Admission
+          </a>
+        </li>
+
+        <li>
+          <a href="Gallery.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Gallery
+          </a>
+        </li>
+
+        <li>
+          <a href="Contact Us.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-box footer-contact">
+
+      <h3>
+        <i class="fa-solid fa-address-book"></i>
+        Contact Info
+      </h3>
+
+      <p>
+        <i class="fa-solid fa-location-dot"></i>
+       Maa Sharda College of Nursing
+      </p>
+
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        +91 9643840096
+      </p>
+
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        maashardacolle@gmail.com
+      </p>
+
+      <!-- SOCIAL -->
+      <div class="social-icons">
+
+        <a href="#">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+
+    © 2026
+    <span>Maa Sharda Nursing College</span>
+    | Designed By Amrin Siddiqui
+
+  </div>
+</footer>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+/* SCROLL ANIMATION */
+
+const elements = document.querySelectorAll(".fade");
+
+window.addEventListener("scroll", () => {
+
+  elements.forEach(el => {
+
+    let top = el.getBoundingClientRect().top;
+
+    if(top < window.innerHeight - 100){
+      el.classList.add("show");
+    }
+
+  });
+
+});
+
+/* Page Load Animation */
+window.onload = () => {
+  elements.forEach(el => {
+    el.classList.add("show");
+  });
+};
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

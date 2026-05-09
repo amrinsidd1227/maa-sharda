@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#0f172a;
+  color:#fff;
+}
+
+/* HEADER */
+.header_1{
+  text-align:center;
+  padding:40px 20px;
+}
+.header_1 h1{
+  font-size:38px;
+  background:linear-gradient(to right,#fc8607,#ff3cac);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* FILTER */
+.filter{
+  text-align:center;
+  margin-bottom:20px;
+}
+.filter button{
+  margin:5px;
+  padding:8px 15px;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+  background:#222;
+  color:#fff;
+  transition:0.3s;
+}
+.filter button:hover,
+.filter .active{
+  background:#fc8607;
+}
+
+/* MASONRY */
+.gallery{
+  column-count:3;
+  column-gap:15px;
+  padding:20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+@media(max-width:900px){
+  .gallery{column-count:2;}
+}
+@media(max-width:600px){
+  .gallery{column-count:1;}
+}
+
+/* ITEM */
+.item{
+  position:relative;
+  margin-bottom:15px;
+  overflow:hidden;
+  border-radius:12px;
+  cursor:pointer;
+  transition:0.4s;
+}
+
+/* IMAGE */
+.item img{
+  width:100%;
+  display:block;
+  transition:0.5s;
+}
+
+/* OVERLAY TEXT */
+.text{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding:10px;
+  background:linear-gradient(to top,rgba(0,0,0,0.8),transparent);
+  opacity:0;
+  transform:translateY(20px);
+  transition:0.4s;
+}
+.text h3{
+  color:#fc8607;
+}
+
+/* HOVER */
+.item:hover img{
+  transform:scale(1.25);
+}
+.item:hover .text{
+  opacity:1;
+  transform:translateY(0);
+}
+.item:hover{
+  box-shadow:0 0 25px rgba(252,134,7,0.6);
+}
+
+/* POPUP */
+.popup{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.9);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+
+.popup img{
+  max-width:90%;
+  max-height:80%;
+  border-radius:10px;
+}
+
+.close{
+  position:absolute;
+  top:20px;
+  right:30px;
+  font-size:30px;
+  cursor:pointer;
+}
+
+/* BUTTON ACTIVE */
+button.active{
+  background:#fc8607;
+}
+</style>
+</head>
+
+<body>
+
+
+  <!-- ================= TOP HEADER ================= -->
+<div class="top-header">
+  <div class="top-left">
+    <span>
+      <i class="fa-solid fa-phone"></i>
+      +91 9454700744
+    </span>
+    <span>
+      <i class="fa-solid fa-envelope"></i>
+      maashardacollegeofnursing@gmail.com
+    </span>
+  </div>
+  <div class="top-social">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</div>
+<!-- ================= MAIN HEADER ================= -->
+<div class="header">
+  <!-- LOGO -->
+  <div class="logo-box_1">
+    <img src="pic/Maa_Sharda_College_Of_Nursing_Allahabad png.png" alt="Logo">
+  </div>
+  <!-- TITLE -->
+  <div class="title">
+    <h1>
+      Maa Sharda College Of Nursing <br>
+      & Paramedical Science
+    </h1>
+    <h2>
+      Government Institute Of Medical Sciences
+    </h2>
+  </div>
+  <!-- BADGE -->
+  <div class="right-badge">
+    <div class="badge-box">
+      <h3>Admission Open</h3>
+      <p>Session 2026-27</p>
+    </div>
+  </div>
+</div>
+<!-- ================= NAVBAR ================= -->
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg">
+<div class="container-fluid">
+<a class="navbar-brand" href="#">
+  <i class="fa-solid fa-graduation-cap"></i>
+  Maa Sharda
+</a>
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="index.html">
+<i class="fa-solid fa-house"></i>
+Home
+</a>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle"
+href="#"
+role="button"
+data-bs-toggle="dropdown">
+<i class="fa-solid fa-user-graduate"></i>
+About
+</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="about us.html">
+About Us
+</a>
+</li>
+<li>
+<a class="dropdown-item" href="news update.html">
+News Update
+</a>
+</li>
+<li>
+<a class="dropdown-item" href="Gallery.html">
+Gallery
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle"
+href="#"
+role="button"
+data-bs-toggle="dropdown">
+<i class="fa-solid fa-user-graduate"></i>
+Admissions
+</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="Associated Hospitals.html">
+Associated hospital 
+</a>
+</li>
+<li>
+<a class="dropdown-item" href="ragistration form.html">
+Admission Form
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="Facilities.html">
+<i class="fa-solid fa-book"></i>
+facility
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="course.html">
+<i class="fa-solid fa-laptop-medical"></i>
+Courses
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="Contact Us.html">
+<i class="fa-solid fa-address-book"></i>
+Contact
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+
+
+
+
+
+
+
+
+<!-- Gallary---------------------------------------------------------------------------------- -->
+<div class="header_1">
+  <h1>📸 Gallery</h1>
+</div>
+
+<!-- FILTER -->
+<div class="filter">
+  <button class="active" onclick="filter('all')">All</button>
+  <button onclick="filter('hospital')">College Acivity</button>
+  <button onclick="filter('class')">Class</button>
+  <button onclick="filter('event')">Events</button>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery">
+
+    <!-- Hospital Image  -->
+  <div class="item hospital">
+    <img src="pic/maa_sharda_college (1).jpg">
+    <div class="text"><h3>Hospital</h3></div>
+  </div>
+  <div class="item hospital">
+    <img src="pic/1 (4).jpg">
+    <div class="text"><h3>Hospital Training</h3></div>
+  </div>
+  <div class="item hospital">
+    <img src="pic/activity (2).jpeg">
+    <div class="text"><h3>College Activity</h3></div>
+  </div>
+  <div class="item hospital">
+    <img src="pic/activity (1).jpg">
+    <div class="text"><h3>College Activity</h3></div>
+  </div>
+  <div class="item hospital">
+    <img src="pic/activity (1).jpeg">
+    <div class="text"><h3>College Activity</h3></div>
+  </div>
+  <div class="item hospital">
+    <img src="pic/activity (3).jpeg">
+    <div class="text"><h3>College Activity</h3></div>
+  </div>
+  <div class="item hospital">
+    <img src="pic/library.jpg.jpeg">
+    <div class="text"><h3>Library Room</h3></div>
+  </div>
+  <div class="item hospital">
+    <img src="pic/1 (10).jpg">
+    <div class="text"><h3>Computer Lab</h3></div>
+  </div>
+  <div class="item hospital">
+    <img src="pic/c.jpeg">
+    <div class="text"><h3>Class Activity</h3></div>
+  </div>
+  <div class="item hospital">
+    <img src="pic/computers.jpg.jpeg">
+    <div class="text"><h3>Computer Lab</h3></div>
+  </div>
+ 
+  
+<!-- Class------------------------------------ -->
+
+  <div class="item class">
+    <img src="pic/class (8).jpeg">
+    <div class="text"><h3>Class Room</h3></div>
+  </div>
+<!-- event Image ===================================== -->
+  <div class="item event">
+    <img src="">
+    <div class="text"><h3>College Event</h3></div>
+  </div>
+  <div class="item event">
+    <img src="pic/event (1).jpeg">
+    <div class="text"><h3>College Event</h3></div>
+  </div>
+  <div class="item event">
+    <img src="pic/event (10).jpeg">
+    <div class="text"><h3>College Event</h3></div>
+  </div>
+  <div class="item event">
+    <img src="pic/event (11).jpeg">
+    <div class="text"><h3>College Event</h3></div>
+  </div>
+  <div class="item event">
+    <img src="pic/event (12).jpeg">
+    <div class="text"><h3>College Event</h3></div>
+  </div>
+  <div class="item event">
+    <img src="pic/event (13).jpeg">
+    <div class="text"><h3>College Event</h3></div>
+  </div>
+  <div class="item event">
+    <img src="pic/event (14).jpeg">
+    <div class="text"><h3>College Event</h3></div>
+  </div>
+  <div class="item event">
+    <img src="pic/event (15).jpeg">
+    <div class="text"><h3>College Event</h3></div>
+  </div>
+  <div class="item event">
+    <img src="pic/event (16).jpeg">
+    <div class="text"><h3>College Event</h3></div>
+  </div>
+  <div class="item event">
+    <img src="pic/event (17).jpeg">
+    <div class="text"><h3>College Event</h3></div>
+  </div>
+  <div class="item event">
+    <img src="pic/event (17).jpeg">
+    <div class="text"><h3>College Event</h3></div>
+  </div>
+  <div class="item event">
+    <img src="pic/event (18).jpeg">
+    <div class="text"><h3>College Event</h3></div>
+  </div>
+  <div class="item event">
+    <img src="pic/event (19).jpeg">
+    <div class="text"><h3>College Event</h3></div>
+  </div>
+  <div class="item event">
+    <img src="pic/event (19).jpeg">
+    <div class="text"><h3>College Event</h3></div>
+  </div>
+  <div class="item event">
+    <img src="pic/event (20).jpeg">
+    <div class="text"><h3>College Event</h3></div>
+  </div>
+
+  
+
+
+  <!-- Class ===================================================== -->
+  <div class="item class">
+    <img src="PIC/class (1).jpeg">
+    <div class="text"><h3>Class Room</h3></div>
+  </div>
+  <div class="item class">
+    <img src="pic/class (2).jpeg">
+    <div class="text"><h3>Class Room</h3></div>
+  </div>
+  <div class="item class">
+    <img src="pic/class (3).jpeg">
+    <div class="text"><h3>Class Room</h3></div>
+  </div>
+  <div class="item class">
+    <img src="pic/class (4).jpeg">
+    <div class="text"><h3>Class Room</h3></div>
+  </div>
+  <div class="item class">
+    <img src="pic/class (5).jpeg">
+    <div class="text"><h3>Class Room</h3></div>
+  </div>
+  <div class="item class">
+    <img src="pic/class (6).jpeg">
+    <div class="text"><h3>Class Room</h3></div>
+  </div>
+  <div class="item class">
+    <img src="pic/class (7).jpeg">
+    <div class="text"><h3>Class Room</h3></div>
+  </div>
+  <div class="item class">
+    <img src="pic/class (8).jpeg">
+    <div class="text"><h3>Class Room</h3></div>
+  </div>
+
+</div>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+  <span class="close" onclick="closeImg()">✖</span>
+  <img id="popupImg">
+</div>
+
+<script>
+
+/* FILTER */
+function filter(cat){
+  let items = document.querySelectorAll(".item");
+  document.querySelectorAll(".filter button").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+
+  items.forEach(item=>{
+    if(cat==="all" || item.classList.contains(cat)){
+      item.style.display="block";
+    }else{
+      item.style.display="none";
+    }
+  });
+}
+
+/* POPUP */
+document.querySelectorAll(".item img").forEach(img=>{
+  img.onclick=()=>{
+    document.getElementById("popup").style.display="flex";
+    document.getElementById("popupImg").src=img.src;
+  }
+});
+
+function closeImg(){
+  document.getElementById("popup").style.display="none";
+}
+</script>
+
+<!-- footer --------------------------------------------------------------------- -->
+
+
+
+<footer class="footer">
+
+  <!-- TOP LINE -->
+  <div class="footer-top-line"></div>
+
+  <!-- GRID -->
+  <div class="footer-grid"></div>
+
+  <!-- OVERLAY -->
+  <div class="footer-overlay"></div>
+
+  <!-- BLUR EFFECT -->
+  <div class="footer-blur blur1"></div>
+  <div class="footer-blur blur2"></div>
+  <div class="footer-blur blur3"></div>
+
+  <!-- PARTICLES -->
+  <div class="footer-particles">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </div>
+
+  <!-- CONTAINER -->
+  <div class="footer-container">
+
+    <!-- ABOUT -->
+    <div class="footer-box">
+
+      <h3>
+        <i class="fa-solid fa-hospital"></i>
+        About College
+      </h3>
+
+      <p>
+        We provide quality education and professional healthcare training at
+        Maa Sharda College of Nursing & Para Medical Sciences since 2013.
+        With experienced faculty, modern labs, practical exposure and a
+        green campus environment.
+      </p>
+
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-box">
+
+      <h3>
+        <i class="fa-solid fa-link"></i>
+        Quick Links
+      </h3>
+
+      <ul class="footer-links">
+
+        <li>
+          <a href="index.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="about us.html">
+            <i class="fa-solid fa-angle-right"></i>
+            About Us
+          </a>
+        </li>
+
+        <li>
+          <a href="course.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Courses
+          </a>
+        </li>
+
+        <li>
+          <a href="ragistration form.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Admission
+          </a>
+        </li>
+
+        <li>
+          <a href="Gallery.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Gallery
+          </a>
+        </li>
+
+        <li>
+          <a href="Contact Us.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-box footer-contact">
+
+      <h3>
+        <i class="fa-solid fa-address-book"></i>
+        Contact Info
+      </h3>
+
+      <p>
+        <i class="fa-solid fa-location-dot"></i>
+        Maa Sharda College Of Nursing
+      </p>
+
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        +91 9643840096
+      </p>
+
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        maashardacollege@gmail.com
+      </p>
+
+      <!-- SOCIAL -->
+      <div class="social-icons">
+
+        <a href="#">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+
+    © 2026
+    <span>Maa Sharda Nursing College</span>
+    | Designed By Amrin Siddiqui
+
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+</body>
+</html>

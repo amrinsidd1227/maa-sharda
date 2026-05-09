@@ -1,0 +1,668 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>College Admission Form</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  min-height:;
+  display:flex;
+  flex-direction:column;
+}
+
+/* HEADER */
+
+header{
+  width:100%;
+  padding:18px 30px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,0.1);
+  box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+.header-container{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.logo{
+  color:#fff;
+  font-size:26px;
+  font-weight:600;
+}
+
+nav a{
+  text-decoration:none;
+  color:#fff;
+  margin-left:20px;
+  transition:0.3s;
+  font-size:15px;
+}
+
+nav a:hover{
+  color:#fc8607;
+}
+
+/* MAIN */
+
+.container_1{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:0px 0px;
+}
+
+main{
+  width:100%;
+  max-width:520px;
+  padding:30px;
+  border-radius:20px;
+  backdrop-filter:blur(15px);
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
+
+h3{
+  text-align:center;
+  margin-bottom:25px;
+  font-size:28px;
+  background:linear-gradient(to right,#fc8607,#ff3cac);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* INPUT */
+
+.input-box{
+  position:relative;
+  margin-bottom:20px;
+}
+
+.input-box input,
+.input-box select{
+  width:100%;
+  padding:14px 12px;
+  border:none;
+  border-radius:10px;
+  background:rgba(255,255,255,0.05);
+  color:#fff;
+  outline:none;
+  border:1px solid rgba(255,255,255,0.2);
+  transition:0.3s;
+  font-size:15px;
+}
+
+.input-box input:focus,
+.input-box select:focus{
+  border-color:#fc8607;
+  box-shadow:0 0 12px #fc8607;
+}
+
+.input-box label{
+  position:absolute;
+  left:12px;
+  top:13px;
+  color:#aaa;
+  pointer-events:none;
+  transition:0.3s;
+  background:#0f172a;
+  padding:0 5px;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label{
+  top:-10px;
+  font-size:12px;
+  color:#fc8607;
+}
+
+select{
+  color:#ccc;
+}
+
+option{
+  color:#000;
+}
+
+/* BUTTON */
+
+button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,#fc8607,#ff3cac);
+  color:#fff;
+  font-size:16px;
+  font-weight:500;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  box-shadow:0 0 20px #fc8607;
+  transform:scale(1.03);
+}
+
+button:active{
+  transform:scale(0.95);
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .header-container{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  nav a{
+    margin:0 10px;
+  }
+
+  .logo{
+    font-size:22px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+
+
+  <!-- ================= TOP HEADER ================= -->
+<div class="top-header">
+  <div class="top-left">
+    <span>
+      <i class="fa-solid fa-phone"></i>
+      +91 9454700744
+    </span>
+    <span>
+      <i class="fa-solid fa-envelope"></i>
+      maashardacollegeofnursing@gmail.com
+    </span>
+  </div>
+  <div class="top-social">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</div>
+<!-- ================= MAIN HEADER ================= -->
+<div class="header">
+  <!-- LOGO -->
+  <div class="logo-box_1">
+    <img src="pic/Maa_Sharda_College_Of_Nursing_Allahabad png.png" alt="Logo">
+  </div>
+  <!-- TITLE -->
+  <div class="title">
+    <h1>
+      Maa Sharda College Of Nursing <br>
+      & Paramedical Science
+    </h1>
+    <h2>
+      Government Institute Of Medical Sciences
+    </h2>
+  </div>
+  <!-- BADGE -->
+  <div class="right-badge">
+    <div class="badge-box">
+      <h3>Admission Open</h3>
+      <p>Session 2026-27</p>
+    </div>
+  </div>
+</div>
+<!-- ================= NAVBAR ================= -->
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg">
+<div class="container-fluid">
+<a class="navbar-brand" href="#">
+  <i class="fa-solid fa-graduation-cap"></i>
+  Maa Sharda
+</a>
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="header.html">
+<i class="fa-solid fa-house"></i>
+Home
+</a>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle"
+href="#"
+role="button"
+data-bs-toggle="dropdown">
+<i class="fa-solid fa-user-graduate"></i>
+About
+</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="about us.html">
+About Us
+</a>
+</li>
+<li>
+<a class="dropdown-item" href="news update.html">
+News Update
+</a>
+</li>
+<li>
+<a class="dropdown-item" href="Gallery.html">
+Gallery
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle"
+href="#"
+role="button"
+data-bs-toggle="dropdown">
+<i class="fa-solid fa-user-graduate"></i>
+Admissions
+</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="Associated Hospitals.html">
+Associated hospital 
+</a>
+</li>
+<li>
+<a class="dropdown-item" href="ragistration form.html">
+Admission Form
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="Facilities.html">
+<i class="fa-solid fa-book"></i>
+facility
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="course.html">
+<i class="fa-solid fa-laptop-medical"></i>
+Courses
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="Contact Us.html">
+<i class="fa-solid fa-address-book"></i>
+Contact
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+
+
+<!-- FORM SECTION -->
+
+<div class="container_1">
+
+<main>
+
+<h3>College Admission Form</h3>
+
+<form id="myForm">
+
+<div class="input-box">
+<input type="text" name="name" required>
+<label>Full Name</label>
+</div>
+
+<div class="input-box">
+<input type="email" name="email" required>
+<label>Email</label>
+</div>
+
+<div class="input-box">
+<input type="text" name="contact" required>
+<label>Contact</label>
+</div>
+
+<div class="input-box">
+<input type="text" name="address" required>
+<label>Address</label>
+</div>
+
+<div class="input-box">
+<input type="text" name="city" required>
+<label>City</label>
+</div>
+
+<div class="input-box">
+<select name="state" required>
+<option value="">Select State</option>
+<option>Uttar Pradesh</option>
+<option>Bihar</option>
+<option>Maharashtra</option>
+</select>
+</div>
+
+<div class="input-box">
+<input type="date" name="dob" required>
+</div>
+
+<div class="input-box">
+<select name="gender" required>
+<option value="">Gender</option>
+<option>Male</option>
+<option>Female</option>
+</select>
+</div>
+
+<div class="input-box">
+<select name="course" required>
+<option value="">Course</option>
+<option>General Nursing And Midwifery (G.N.M.)</option>
+<option>Auxiliary Nurse and Midwives (A.N.M.)</option>
+<option>B.sc Nursing</option>
+</select>
+</div>
+
+<button type="submit">
+Submit Application
+</button>
+
+</form>
+
+</main>
+
+</div>
+
+<!-- footer --------------------------------------------------------------------- -->
+
+
+
+<footer class="footer">
+
+  <!-- TOP LINE -->
+  <div class="footer-top-line"></div>
+
+  <!-- GRID -->
+  <div class="footer-grid"></div>
+
+  <!-- OVERLAY -->
+  <div class="footer-overlay"></div>
+
+  <!-- BLUR EFFECT -->
+  <div class="footer-blur blur1"></div>
+  <div class="footer-blur blur2"></div>
+  <div class="footer-blur blur3"></div>
+
+  <!-- PARTICLES -->
+  <div class="footer-particles">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </div>
+
+  <!-- CONTAINER -->
+  <div class="footer-container">
+
+    <!-- ABOUT -->
+    <div class="footer-box">
+
+      <h3>
+        <i class="fa-solid fa-hospital"></i>
+        About College
+      </h3>
+
+      <p>
+        We provide quality education and professional healthcare training at
+        Maa Sharda College of Nursing & Para Medical Sciences since 2013.
+        With experienced faculty, modern labs, practical exposure and a
+        green campus environment.
+      </p>
+
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-box">
+
+      <h3>
+        <i class="fa-solid fa-link"></i>
+        Quick Links
+      </h3>
+
+      <ul class="footer-links">
+
+        <li>
+          <a href="header.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="about us.html">
+            <i class="fa-solid fa-angle-right"></i>
+            About Us
+          </a>
+        </li>
+
+        <li>
+          <a href="course.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Courses
+          </a>
+        </li>
+
+        <li>
+          <a href="ragistration form.html
+          ">
+            <i class="fa-solid fa-angle-right"></i>
+            Admission
+          </a>
+        </li>
+
+        <li>
+          <a href="Gallery.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Gallery
+          </a>
+        </li>
+
+        <li>
+          <a href="Contact Us.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-box footer-contact">
+
+      <h3>
+        <i class="fa-solid fa-address-book"></i>
+        Contact Info
+      </h3>
+
+      <p>
+        <i class="fa-solid fa-location-dot"></i>
+        Maa Sharda College of Nursing 
+      </p>
+
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        +91 9643840096
+      </p>
+
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        maashardacollege@gmail.com
+      </p>
+
+      <!-- SOCIAL -->
+      <div class="social-icons">
+
+        <a href="#">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+
+    © 2026
+    <span>Maa Sharda Nursing College</span>
+    | Designed By Amrin Siddiqui
+
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- EMAIL JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+
+// EMAILJS INIT
+
+(function(){
+  emailjs.init("G1tNFJG9rgbueUlf4");
+})();
+
+// FORM SUBMIT
+
+document.getElementById("myForm").addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  let form = this;
+
+  emailjs.sendForm(
+    "service_xu1bcu7",
+    "template_mpk87i6",
+    form
+  )
+
+  .then(function(){
+
+    let student = {
+
+      name: form.name.value,
+      email: form.email.value,
+      contact: form.contact.value,
+      address: form.address.value,
+      city: form.city.value,
+      state: form.state.value,
+      dob: form.dob.value,
+      gender: form.gender.value,
+      course: form.course.value
+
+    };
+
+    let data =
+    JSON.parse(localStorage.getItem("students"))
+    || [];
+
+    data.push(student);
+
+    localStorage.setItem(
+      "students",
+      JSON.stringify(data)
+    );
+
+    alert("Form Submit ✅");
+
+    form.reset();
+
+  })
+
+  .catch(function(error){
+
+    alert("Error ❌ : " + error.text);
+
+    console.log(error);
+
+  });
+
+});
+
+</script>
+
+</body>
+</html>
+```

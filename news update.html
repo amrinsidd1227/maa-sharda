@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>News & Updates</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+
+/* ================= GLOBAL ================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#070b16;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* ================= BACKGROUND ================= */
+
+body::before{
+  content:"";
+  position:fixed;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  background:linear-gradient(45deg,#ff7a00,#ff3cac);
+  filter:blur(150px);
+  opacity:.18;
+  top:-200px;
+  left:-150px;
+  z-index:-2;
+}
+
+body::after{
+  content:"";
+  position:fixed;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  background:linear-gradient(45deg,#ff3cac,#ff7a00);
+  filter:blur(150px);
+  opacity:.14;
+  bottom:-200px;
+  right:-150px;
+  z-index:-2;
+}
+
+/* ================= SECTION ================= */
+
+.news-zone{
+  width:100%;
+  padding:70px 20px;
+}
+
+.news-container{
+  max-width:1250px;
+  margin:auto;
+}
+
+/* ================= HEADING ================= */
+
+.news-heading{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.news-heading h1{
+  font-size:46px;
+  font-weight:800;
+
+  background:linear-gradient(90deg,#ff7a00,#ff3cac);
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.news-heading p{
+  margin-top:10px;
+  color:#cbd5e1;
+  font-size:15px;
+}
+
+/* ================= LIVE BOX ================= */
+
+.live-news-wrapper{
+  position:relative;
+
+  height:340px;
+
+  overflow:hidden;
+
+  border-radius:30px;
+
+  padding:25px;
+
+  margin-bottom:60px;
+
+  background:rgba(255,255,255,0.05);
+
+  backdrop-filter:blur(18px);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+  0 0 35px rgba(255,122,0,.14),
+  0 0 45px rgba(255,60,172,.10);
+}
+
+/* TOP GLOW LINE */
+
+.live-news-wrapper::before{
+  content:"";
+
+  position:absolute;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:3px;
+
+  background:
+  linear-gradient(90deg,
+  #ff7a00,
+  #ff3cac,
+  #ff7a00);
+
+  background-size:300%;
+
+  animation:lineMove 5s linear infinite;
+}
+
+/* LABEL */
+
+.live-news-label{
+  width:280px;
+
+  margin:auto;
+
+  text-align:center;
+
+  padding:12px 24px;
+
+  border-radius:50px;
+
+  background:
+  linear-gradient(90deg,#ff7a00,#ff3cac);
+
+  font-size:15px;
+  font-weight:700;
+
+  margin-bottom:25px;
+
+  box-shadow:
+  0 0 25px rgba(255,122,0,.35);
+}
+
+/* ================= NEWS TRACK ================= */
+
+.live-news-track{
+  display:flex;
+  flex-direction:column;
+
+  gap:18px;
+
+  will-change:transform;
+
+  animation:topDown 22s linear infinite;
+}
+
+/* HOVER PE RUK JAYE */
+
+.live-news-wrapper:hover .live-news-track{
+  animation-play-state:paused;
+}
+
+/* ================= NEWS CARD ================= */
+
+.live-news-card{
+  display:flex;
+  align-items:center;
+
+  gap:16px;
+
+  min-height:88px;
+
+  padding:18px 22px;
+
+  border-radius:22px;
+
+  background:rgba(255,255,255,0.04);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  transition:.4s;
+
+  flex-shrink:0;
+}
+
+/* HOVER */
+
+.live-news-card:hover{
+  transform:translateX(8px);
+
+  background:rgba(255,255,255,0.07);
+
+  box-shadow:
+  0 0 25px rgba(255,122,0,.20),
+  0 0 35px rgba(255,60,172,.16);
+}
+
+/* ICON */
+
+.live-news-icon{
+  min-width:58px;
+  height:58px;
+
+  border-radius:18px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+  linear-gradient(135deg,#ff7a00,#ff3cac);
+
+  font-size:22px;
+
+  box-shadow:
+  0 0 25px rgba(255,122,0,.30);
+}
+
+/* TEXT */
+
+.live-news-text h3{
+  font-size:18px;
+  margin-bottom:5px;
+}
+
+.live-news-text p{
+  color:#cbd5e1;
+  font-size:14px;
+}
+
+/* ================= GRID ================= */
+
+.news-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+/* GRID CARD */
+
+.news-card{
+  position:relative;
+
+  overflow:hidden;
+
+  padding:28px;
+
+  border-radius:28px;
+
+  background:rgba(255,255,255,0.04);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(18px);
+
+  transition:.45s;
+}
+
+/* GLOW BORDER */
+
+.news-card::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  padding:1px;
+
+  border-radius:28px;
+
+  background:
+  linear-gradient(135deg,#ff7a00,#ff3cac);
+
+  -webkit-mask:
+  linear-gradient(#fff 0 0) content-box,
+  linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite:xor;
+
+  mask-composite:exclude;
+
+  opacity:.8;
+}
+
+/* HOVER */
+
+.news-card:hover{
+  transform:translateY(-12px);
+
+  box-shadow:
+  0 0 30px rgba(255,122,0,.18),
+  0 0 40px rgba(255,60,172,.12);
+}
+
+/* CARD TOP */
+
+.card-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-bottom:18px;
+}
+
+/* TAG */
+
+.news-tag{
+  padding:8px 16px;
+
+  border-radius:40px;
+
+  font-size:13px;
+  font-weight:600;
+
+  background:
+  linear-gradient(90deg,#ff7a00,#ff3cac);
+}
+
+/* DATE */
+
+.news-date{
+  color:#cbd5e1;
+  font-size:13px;
+}
+
+/* CARD TITLE */
+
+.news-card h2{
+  font-size:24px;
+  margin-bottom:12px;
+}
+
+/* CARD TEXT */
+
+.news-card p{
+  color:#dbe4f0;
+  line-height:1.7;
+  font-size:14px;
+  margin-bottom:22px;
+}
+
+/* BUTTON */
+
+.news-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+
+  padding:12px 24px;
+
+  border-radius:50px;
+
+  text-decoration:none;
+
+  color:#fff;
+
+  font-weight:600;
+
+  background:
+  linear-gradient(90deg,#ff7a00,#ff3cac);
+
+  transition:.4s;
+}
+
+/* BUTTON HOVER */
+
+.news-btn:hover{
+  transform:scale(1.05);
+
+  box-shadow:
+  0 0 25px rgba(255,122,0,.35);
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes topDown{
+
+  0%{
+    transform:translateY(0);
+  }
+
+  100%{
+    transform:translateY(-50%);
+  }
+
+}
+
+@keyframes lineMove{
+
+  0%{
+    background-position:0%;
+  }
+
+  100%{
+    background-position:300%;
+  }
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+  .news-heading h1{
+    font-size:34px;
+  }
+
+  .live-news-wrapper{
+    height:300px;
+    padding:18px;
+  }
+
+  .live-news-card{
+    min-height:80px;
+    padding:14px;
+  }
+
+  .live-news-text h3{
+    font-size:15px;
+  }
+
+  .live-news-text p{
+    font-size:12px;
+  }
+
+  .news-card{
+    padding:22px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- ================= TOP HEADER ================= -->
+<div class="top-header">
+  <div class="top-left">
+    <span>
+      <i class="fa-solid fa-phone"></i>
+      +91 9454700744
+    </span>
+    <span>
+      <i class="fa-solid fa-envelope"></i>
+      maashardacollegeofnursing@gmail.com
+    </span>
+  </div>
+  <div class="top-social">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</div>
+<!-- ================= MAIN HEADER ================= -->
+<div class="header">
+  <!-- LOGO -->
+  <div class="logo-box_1">
+    <img src="pic/Maa_Sharda_College_Of_Nursing_Allahabad png.png" alt="Logo">
+  </div>
+  <!-- TITLE -->
+  <div class="title">
+    <h1>
+      Maa Sharda College Of Nursing <br>
+      & Paramedical Science
+    </h1>
+    <h2>
+      Government Institute Of Medical Sciences
+    </h2>
+  </div>
+  <!-- BADGE -->
+  <div class="right-badge">
+    <div class="badge-box">
+      <h3>Admission Open</h3>
+      <p>Session 2026-27</p>
+    </div>
+  </div>
+</div>
+<!-- ================= NAVBAR ================= -->
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg">
+<div class="container-fluid">
+<a class="navbar-brand" href="#">
+  <i class="fa-solid fa-graduation-cap"></i>
+  Maa Sharda
+</a>
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="index.html">
+<i class="fa-solid fa-house"></i>
+Home
+</a>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle"
+href="#"
+role="button"
+data-bs-toggle="dropdown">
+<i class="fa-solid fa-user-graduate"></i>
+About
+</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="about us.html">
+About Us
+</a>
+</li>
+<li>
+<a class="dropdown-item" href="news update.html">
+News Update
+</a>
+</li>
+<li>
+<a class="dropdown-item" href="Gallery.html">
+Gallery
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle"
+href="#"
+role="button"
+data-bs-toggle="dropdown">
+<i class="fa-solid fa-user-graduate"></i>
+Admissions
+</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="Associated Hospitals.html">
+Associated hospital 
+</a>
+</li>
+<li>
+<a class="dropdown-item" href="ragistration form.html">
+Admission Form
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="Facilities.html">
+<i class="fa-solid fa-book"></i>
+facility
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="course.html">
+<i class="fa-solid fa-laptop-medical"></i>
+Courses
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="Contact Us.html">
+<i class="fa-solid fa-address-book"></i>
+Contact
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+
+  <!-- ======================================================================= -->
+<section class="news-zone">
+
+<div class="news-container">
+
+  <!-- HEADING -->
+
+  <div class="news-heading">
+
+    <h1>
+      <i class="fa-solid fa-newspaper"></i>
+      News & Updates
+    </h1>
+
+    <p>
+      Latest announcements & campus activities
+    </p>
+
+  </div>
+
+  <!-- LIVE NEWS -->
+
+  <div class="live-news-wrapper">
+
+    
+
+    <div class="live-news-track">
+
+      <!-- CARD 1 -->
+
+      <div class="live-news-card">
+        <div class="live-news-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+
+        <div class="live-news-text">
+          <h3>B.Sc Nursing Admission Open</h3>
+          <p>Admissions started for 2026 session.</p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="live-news-card">
+        <div class="live-news-icon">
+          <i class="fa-solid fa-book-open"></i>
+        </div>
+
+        <div class="live-news-text">
+          <h3>Scholarship Available</h3>
+          <p>Merit scholarships available for students.</p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="live-news-card">
+        <div class="live-news-icon">
+          <i class="fa-solid fa-hospital"></i>
+        </div>
+
+        <div class="live-news-text">
+          <h3>Hospital Training Started</h3>
+          <p>Clinical practical classes are active.</p>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+
+      <div class="live-news-card">
+        <div class="live-news-icon">
+          <i class="fa-solid fa-award"></i>
+        </div>
+
+        <div class="live-news-text">
+          <h3>Top University Result</h3>
+          <p>Students achieved excellent performance.</p>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+
+      <div class="live-news-card">
+        <div class="live-news-icon">
+          <i class="fa-solid fa-user-doctor"></i>
+        </div>
+
+        <div class="live-news-text">
+          <h3>New Faculty Joined</h3>
+          <p>Experienced healthcare experts joined.</p>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+
+      <div class="live-news-card">
+        <div class="live-news-icon">
+          <i class="fa-solid fa-laptop-medical"></i>
+        </div>
+
+        <div class="live-news-text">
+          <h3>Smart Lab Introduced</h3>
+          <p>Modern digital laboratory launched.</p>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+
+      <div class="live-news-card">
+        <div class="live-news-icon">
+          <i class="fa-solid fa-calendar-check"></i>
+        </div>
+
+        <div class="live-news-text">
+          <h3>Annual Function Date Released</h3>
+          <p>Event schedule announced officially.</p>
+        </div>
+      </div>
+
+      <!-- CARD 8 -->
+
+      <div class="live-news-card">
+        <div class="live-news-icon">
+          <i class="fa-solid fa-medal"></i>
+        </div>
+
+        <div class="live-news-text">
+          <h3>College Ranked Top Institute</h3>
+          <p>Recognized among top nursing colleges.</p>
+        </div>
+      </div>
+
+      <!-- DUPLICATE FOR SMOOTH LOOP -->
+
+      <div class="live-news-card">
+        <div class="live-news-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+
+        <div class="live-news-text">
+          <h3>B.Sc Nursing Admission Open</h3>
+          <p>Admissions started for 2026 session.</p>
+        </div>
+      </div>
+
+      <div class="live-news-card">
+        <div class="live-news-icon">
+          <i class="fa-solid fa-book-open"></i>
+        </div>
+
+        <div class="live-news-text">
+          <h3>Scholarship Available</h3>
+          <p>Merit scholarships available for students.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- GRID NEWS -->
+
+  <div class="news-grid">
+
+    <div class="news-card">
+
+      <div class="card-top">
+        <span class="news-tag">Admission</span>
+        <span class="news-date">2026</span>
+      </div>
+
+      <h2>B.Sc Nursing</h2>
+
+      <p>
+        Admissions are now open for B.Sc Nursing,
+        GNM and ANM programs.
+      </p>
+
+      <a href="#" class="news-btn">
+        Apply Now
+      </a>
+
+    </div>
+
+    <div class="news-card">
+
+      <div class="card-top">
+        <span class="news-tag">Exam</span>
+        <span class="news-date">Live</span>
+      </div>
+
+      <h2>Entrance Test</h2>
+
+      <p>
+        Entrance examination notice released
+        for all nursing courses.
+      </p>
+
+      <a href="#" class="news-btn">
+        Read More
+      </a>
+
+    </div>
+
+    <div class="news-card">
+
+      <div class="card-top">
+        <span class="news-tag">Training</span>
+        <span class="news-date">New</span>
+      </div>
+
+      <h2>Clinical Practice</h2>
+
+      <p>
+        Advanced practical hospital exposure
+        sessions started officially.
+      </p>
+
+      <a href="#" class="news-btn">
+        Explore
+      </a>
+
+    </div>
+
+    <div class="news-card">
+
+      <div class="card-top">
+        <span class="news-tag">Scholarship</span>
+        <span class="news-date">Open</span>
+      </div>
+
+      <h2>Student Benefits</h2>
+
+      <p>
+        Financial support available for
+        deserving students.
+      </p>
+
+      <a href="#" class="news-btn">
+        Details
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+<!-- ========================================================== -->
+
+<footer class="footer">
+
+  <!-- TOP LINE -->
+  <div class="footer-top-line"></div>
+
+  <!-- GRID -->
+  <div class="footer-grid"></div>
+
+  <!-- OVERLAY -->
+  <div class="footer-overlay"></div>
+
+  <!-- BLUR EFFECT -->
+  <div class="footer-blur blur1"></div>
+  <div class="footer-blur blur2"></div>
+  <div class="footer-blur blur3"></div>
+
+  <!-- PARTICLES -->
+  <div class="footer-particles">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </div>
+
+  <!-- CONTAINER -->
+  <div class="footer-container">
+
+    <!-- ABOUT -->
+    <div class="footer-box">
+
+      <h3>
+        <i class="fa-solid fa-hospital"></i>
+        About College
+      </h3>
+
+      <p>
+        We provide quality education and professional healthcare training at
+        Maa Sharda College of Nursing & Para Medical Sciences since 2013.
+        With experienced faculty, modern labs, practical exposure and a
+        green campus environment.
+      </p>
+
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-box">
+
+      <h3>
+        <i class="fa-solid fa-link"></i>
+        Quick Links
+      </h3>
+
+      <ul class="footer-links">
+
+        <li>
+          <a href="index.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="about us.html">
+            <i class="fa-solid fa-angle-right"></i>
+            About Us
+          </a>
+        </li>
+
+        <li>
+          <a href="course.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Courses
+          </a>
+        </li>
+
+        <li>
+          <a href="ragistration form.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Admission
+          </a>
+        </li>
+
+        <li>
+          <a href="Gallery.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Gallery
+          </a>
+        </li>
+
+        <li>
+          <a href="Contact Us.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-box footer-contact">
+
+      <h3>
+        <i class="fa-solid fa-address-book"></i>
+        Contact Info
+      </h3>
+
+      <p>
+        <i class="fa-solid fa-location-dot"></i>
+        Maa Sharda College of Nursing 
+      </p>
+
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        +91 9643840096
+      </p>
+
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        maashardacollege@gmail.com
+      </p>
+
+      <!-- SOCIAL -->
+      <div class="social-icons">
+
+        <a href="#">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+
+    © 2026
+    <span>Maa Sharda Nursing College</span>
+    | Designed By Amrin Siddiqui
+
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

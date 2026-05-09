@@ -1,0 +1,2788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maa Sharda college of Nursing</title>
+<link rel="stylesheet" href="pic/maa_sharda_college (1).jpg">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+
+/* ================= GLOBAL ================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#0b1120;
+  overflow-x:hidden;
+}
+
+/* ================= TOP HEADER ================= */
+
+.top-header{
+  position:relative;
+
+  background:
+  linear-gradient(
+  90deg,
+  #ff6a00,
+  #ff0080,
+  #ff6a00
+  );
+
+  background-size:300% 300%;
+
+  animation:gradientMove 8s ease infinite;
+
+  padding:12px 50px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+
+  overflow:hidden;
+}
+
+/* ANIMATION */
+
+@keyframes gradientMove{
+
+0%{
+  background-position:0% 50%;
+}
+
+50%{
+  background-position:100% 50%;
+}
+
+100%{
+  background-position:0% 50%;
+}
+
+}
+
+/* GLOW CIRCLES */
+
+.top-header::before{
+  content:"";
+  position:absolute;
+
+  width:250px;
+  height:250px;
+
+  background:rgba(255,255,255,0.12);
+
+  border-radius:50%;
+
+  left:-100px;
+  top:-100px;
+}
+
+.top-header::after{
+  content:"";
+  position:absolute;
+
+  width:200px;
+  height:200px;
+
+  background:rgba(255,255,255,0.08);
+
+  border-radius:50%;
+
+  right:-80px;
+  bottom:-80px;
+}
+
+/* LEFT INFO */
+
+.top-left{
+  position:relative;
+  z-index:2;
+
+  display:flex;
+  gap:28px;
+  flex-wrap:wrap;
+}
+
+.top-left span{
+  color:#fff;
+
+  font-size:14px;
+  font-weight:500;
+
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+/* ICONS */
+
+.top-left i{
+  color:#fff;
+}
+
+/* SOCIAL */
+
+.top-social{
+  position:relative;
+  z-index:2;
+
+  display:flex;
+  gap:12px;
+}
+
+.top-social a{
+  width:38px;
+  height:38px;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:rgba(255,255,255,0.12);
+
+  color:#fff;
+
+  text-decoration:none;
+
+  transition:0.4s;
+}
+
+.top-social a:hover{
+  background:#fff;
+  color:#ff0080;
+
+  transform:translateY(-5px) scale(1.1);
+
+  box-shadow:
+  0 0 15px #fff,
+  0 0 30px rgba(255,255,255,0.6);
+}
+
+/* ================= MAIN HEADER ================= */
+
+.header{
+  position:relative;
+
+  display:grid;
+  grid-template-columns:180px auto 200px;
+
+  align-items:center;
+
+  padding:28px 60px;
+
+  background:
+  linear-gradient(
+  135deg,
+  rgba(10,15,35,0.97),
+  rgba(17,24,39,0.97)
+  );
+
+  overflow:hidden;
+
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+/* BACKGROUND GLOW */
+
+.header::before{
+  content:"";
+
+  position:absolute;
+
+  width:400px;
+  height:400px;
+
+  background:rgba(255,106,0,0.12);
+
+  border-radius:50%;
+
+  left:-140px;
+  top:-120px;
+}
+
+.header::after{
+  content:"";
+
+  position:absolute;
+
+  width:350px;
+  height:350px;
+
+  background:rgba(255,0,128,0.12);
+
+  border-radius:50%;
+
+  right:-120px;
+  bottom:-120px;
+}
+
+/* ================= LOGO ================= */
+
+.logo-box_1{
+  position:relative;
+  z-index:5;
+}
+
+.logo-box_1 img{
+  width:130px;
+  height:130;
+  border-radius: 50%;
+
+  object-fit:contain;
+
+
+  background:#fff;
+
+  padding:10px;
+
+  border:4px solid rgba(255,255,255,0.15);
+
+  box-shadow:
+  0 0 20px rgba(255,106,0,0.5),
+  0 0 40px rgba(255,0,128,0.4);
+
+  transition:0.5s;
+}
+
+.logo-box_1 img:hover{
+  transform:scale(1.08) rotate(5deg);
+
+  box-shadow:
+  0 0 30px rgba(255,106,0,0.7),
+  0 0 60px rgba(255,0,128,0.6);
+}
+
+/* ================= TITLE ================= */
+
+.title{
+  position:relative;
+  z-index:5;
+
+  text-align:center;
+
+  padding:0 20px;
+}
+
+.title h1{
+  font-size:48px;
+  font-weight:800;
+
+  line-height:1.2;
+
+  margin-bottom:12px;
+
+  background:
+  linear-gradient(
+  to right,
+  #ffffff,
+  #ffb347,
+  #ff4fa3,
+  #ffffff
+  );
+
+  background-size:300% auto;
+
+  animation:textGlow 6s linear infinite;
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+@keyframes textGlow{
+
+0%{
+  background-position:0% center;
+}
+
+100%{
+  background-position:300% center;
+}
+
+}
+
+.title h2{
+  font-size:17px;
+  color:#d6d6d6;
+
+  font-weight:400;
+
+  letter-spacing:1px;
+}
+
+/* ================= BADGE ================= */
+
+.right-badge{
+  position:relative;
+  z-index:5;
+
+  display:flex;
+  justify-content:center;
+}
+
+.badge-box{
+  position:relative;
+
+  padding:18px 25px;
+
+  border-radius:20px;
+
+  background:
+  linear-gradient(
+  135deg,
+  rgba(255,255,255,0.12),
+  rgba(255,255,255,0.04)
+  );
+
+  backdrop-filter:blur(14px);
+
+  border:1px solid rgba(255,255,255,0.12);
+
+  overflow:hidden;
+
+  text-align:center;
+
+  color:#fff;
+
+  box-shadow:
+  0 0 20px rgba(255,106,0,0.2);
+}
+
+/* SHINE EFFECT */
+
+.badge-box::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:-120%;
+
+  width:80%;
+  height:100%;
+
+  background:
+  linear-gradient(
+  90deg,
+  transparent,
+  rgba(255,255,255,0.35),
+  transparent
+  );
+
+  transform:skewX(-25deg);
+
+  animation:shine 4s infinite;
+}
+
+@keyframes shine{
+
+100%{
+  left:130%;
+}
+
+}
+
+.badge-box h3{
+  font-size:18px;
+  color:#ffb347;
+
+  margin-bottom:5px;
+}
+
+.badge-box p{
+  font-size:14px;
+  margin:0;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+  background:
+  linear-gradient(
+  90deg,
+  #ff6a00,
+  #ff0080
+  );
+
+  padding:15px 35px;
+
+  position:sticky;
+  top:0;
+
+  z-index:999;
+
+  box-shadow:
+  0 8px 25px rgba(0,0,0,0.35);
+}
+
+/* BRAND */
+
+.navbar-brand{
+  color:#fff !important;
+
+  font-size:24px;
+  font-weight:700;
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+/* LINKS */
+
+.navbar-nav{
+  gap:12px;
+}
+
+.navbar-nav .nav-link{
+  position:relative;
+
+  color:#fff !important;
+
+  font-size:15px;
+  font-weight:500;
+
+  padding:12px 18px !important;
+
+  border-radius:50px;
+
+  transition:0.4s;
+}
+
+/* HOVER */
+
+.navbar-nav .nav-link:hover{
+  background:rgba(255,255,255,0.15);
+
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 0 15px rgba(255,255,255,0.2);
+}
+
+/* UNDERLINE */
+
+.navbar-nav .nav-link::after{
+  content:"";
+
+  position:absolute;
+
+  left:50%;
+  bottom:6px;
+
+  transform:translateX(-50%);
+
+  width:0%;
+  height:2px;
+
+  border-radius:10px;
+
+  background:#fff;
+
+  transition:0.4s;
+}
+
+.navbar-nav .nav-link:hover::after{
+  width:55%;
+}
+
+/* DROPDOWN */
+
+.dropdown-menu{
+  background:#111827;
+
+  border:none;
+
+  border-radius:18px;
+
+  padding:12px;
+
+  overflow:hidden;
+
+  margin-top:12px;
+
+  box-shadow:
+  0 10px 25px rgba(0,0,0,0.35);
+}
+
+.dropdown-item{
+  color:#fff;
+
+  padding:12px 15px;
+
+  border-radius:12px;
+
+  transition:0.4s;
+}
+
+.dropdown-item:hover{
+  background:
+  linear-gradient(
+  45deg,
+  #ff6a00,
+  #ff0080
+  );
+
+  color:#fff;
+
+  transform:translateX(6px);
+}
+
+/* DESKTOP HOVER */
+
+@media(min-width:992px){
+
+.dropdown:hover .dropdown-menu{
+  display:block;
+}
+
+}
+
+/* TOGGLER */
+
+.navbar-toggler{
+  background:#fff;
+  border:none;
+  padding:8px 10px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:992px){
+
+.header{
+  grid-template-columns:1fr;
+  text-align:center;
+
+  gap:30px;
+
+  padding:35px 20px;
+}
+
+.logo-box{
+  display:flex;
+  justify-content:center;
+}
+
+.title h1{
+  font-size:34px;
+}
+
+.title h2{
+  font-size:14px;
+}
+
+.top-header{
+  justify-content:center;
+  gap:18px;
+
+  text-align:center;
+}
+
+.top-left{
+  justify-content:center;
+}
+
+.right-badge{
+  justify-content:center;
+}
+
+}
+
+/* EXTRA MOBILE */
+
+@media(max-width:576px){
+
+.title h1{
+  font-size:26px;
+}
+
+.logo-box img{
+  width:100px;
+  height:100px;
+}
+
+.navbar-brand{
+  font-size:18px;
+}
+
+.navbar-nav .nav-link{
+  text-align:center;
+}
+
+.top-left span{
+  font-size:12px;
+}
+
+}
+
+/* ==============home section============================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#111;
+  overflow-x:hidden;
+}
+
+/* ================= SLIDER ================= */
+.slider{
+  position:relative;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+}
+
+/* IMAGE */
+#slideImage{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:1s;
+}
+
+/* DARK OVERLAY */
+.slider::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to right,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.2)
+  );
+  z-index:1;
+}
+
+/* ================= CAPTION ================= */
+.caption{
+  position:absolute;
+  top:50%;
+  left:7%;
+  transform:translateY(-50%);
+  color:#fff;
+  z-index:5;
+  width:90%;
+  max-width:700px;
+}
+
+/* LINE 1 */
+.line1{
+  font-size:65px;
+  font-weight:800;
+  line-height:1.1;
+  color:#fff;
+  margin-bottom:20px;
+  text-shadow:
+    0 0 10px #ff7300,
+    0 0 20px #ff008c;
+}
+
+/* LINE 2 */
+.line2{
+  font-size:20px;
+  color:#ff9d00;
+  font-weight:600;
+  margin-bottom:18px;
+}
+
+/* LINE 3 */
+.line3{
+  font-size:32px;
+  font-weight:700;
+  color:#ff008c;
+  margin-bottom:18px;
+}
+
+/* LINE 4 */
+.line4{
+  font-size:18px;
+  line-height:1.8;
+  color:#f1f1f1;
+  max-width:600px;
+}
+
+/* ================= BUTTONS ================= */
+.hero-buttons{
+  margin-top:35px;
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+/* BUTTON */
+.hero-btn{
+  padding:15px 32px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:700;
+  transition:0.4s;
+  font-size:15px;
+  letter-spacing:0.5px;
+}
+
+/* PRIMARY */
+.hero-btn.primary{
+  background:linear-gradient(45deg,#ff7300,#ff008c);
+  color:#fff;
+  box-shadow:
+    0 0 15px #ff7300,
+    0 0 30px #ff008c;
+}
+
+.hero-btn.primary:hover{
+  transform:translateY(-5px) scale(1.05);
+}
+
+/* SECONDARY */
+.hero-btn.secondary{
+  border:2px solid #ff008c;
+  color:#fff;
+}
+
+.hero-btn.secondary:hover{
+  background:#ff008c;
+  transform:translateY(-5px);
+}
+
+/* ================= ARROWS ================= */
+.arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.08);
+  border:2px solid rgba(255,255,255,0.2);
+  color:#fff;
+  font-size:24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  z-index:10;
+  transition:0.4s;
+}
+
+/* LEFT RIGHT */
+.arrow.left{
+  left:25px;
+}
+
+.arrow.right{
+  right:25px;
+}
+
+/* HOVER */
+.arrow:hover{
+  background:linear-gradient(45deg,#ff7300,#ff008c);
+  box-shadow:
+    0 0 15px #ff7300,
+    0 0 25px #ff008c;
+  transform:translateY(-50%) scale(1.1);
+}
+
+/* ================= NEWS ================= */
+.news{
+  background:linear-gradient(90deg,#ff7300,#ff008c);
+  color:#fff;
+  padding:14px;
+  overflow:hidden;
+  white-space:nowrap;
+  font-weight:600;
+  letter-spacing:0.5px;
+}
+
+.news span{
+  display:inline-block;
+  padding-left:100%;
+  animation:ticker 18s linear infinite;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes ticker{
+  0%{
+    transform:translateX(0);
+  }
+  100%{
+    transform:translateX(-100%);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px){
+
+  .slider{
+    height:85vh;
+  }
+
+  .caption{
+    left:20px;
+    right:20px;
+    max-width:90%;
+  }
+
+  .line1{
+    font-size:40px;
+    margin-bottom:15px;
+  }
+
+  .line2{
+    font-size:16px;
+    margin-bottom:12px;
+  }
+
+  .line3{
+    font-size:24px;
+    margin-bottom:12px;
+  }
+
+  .line4{
+    font-size:14px;
+    line-height:1.6;
+  }
+
+  .hero-buttons{
+    gap:10px;
+    margin-top:25px;
+  }
+
+  .hero-btn{
+    padding:12px 20px;
+    font-size:13px;
+  }
+
+  .arrow{
+    width:45px;
+    height:45px;
+    font-size:18px;
+  }
+
+  .arrow.left{
+    left:10px;
+  }
+
+  .arrow.right{
+    right:10px;
+  }
+
+}
+/* ================================= Director sir Massage ================================== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  overflow-x:hidden;
+  color:#fff;
+}
+
+/* SECTION */
+
+.message-section{
+  width:100%;
+  padding:70px 20px;
+  position:relative;
+}
+
+/* GLOW EFFECT */
+
+.message-section::before{
+  content:"";
+  position:absolute;
+  width:320px;
+  height:320px;
+  background:rgba(255,119,0,0.15);
+  border-radius:50%;
+  top:-120px;
+  left:-120px;
+  filter:blur(30px);
+}
+
+.message-section::after{
+  content:"";
+  position:absolute;
+  width:320px;
+  height:320px;
+  background:rgba(255,0,128,0.15);
+  border-radius:50%;
+  bottom:-120px;
+  right:-120px;
+  filter:blur(30px);
+}
+
+/* HEADING */
+
+.section-title{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title h1{
+  font-size:44px;
+  font-weight:800;
+  background:linear-gradient(to right,#ff7700,#ff0080,#ffffff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:10px;
+}
+
+.section-title p{
+  color:#cbd5e1;
+  font-size:15px;
+  letter-spacing:1px;
+}
+
+/* CONTAINER */
+
+.cards-container{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:30px;
+
+  max-width:1000px;
+  margin:auto;
+}
+
+/* CARD */
+
+.card{
+  position:relative;
+
+  background:rgba(255,255,255,0.07);
+
+  backdrop-filter:blur(12px);
+
+  border:1px solid rgba(255,255,255,0.12);
+
+  border-radius:28px;
+
+  padding:22px 20px;
+
+  overflow:hidden;
+
+  transition:0.5s ease;
+
+  min-height:34vh;
+}
+
+/* TOP BORDER */
+
+.card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:5px;
+  background:linear-gradient(to right,#ff7700,#ff0080);
+}
+
+/* HOVER EFFECT */
+
+.card:hover{
+  transform:translateY(-12px) scale(1.02);
+
+  box-shadow:
+  0 18px 40px rgba(0,0,0,0.4),
+  0 0 22px rgba(255,119,0,0.35),
+  0 0 35px rgba(255,0,128,0.20);
+}
+
+/* IMAGE */
+
+.card-image{
+  display:flex;
+  justify-content:center;
+  margin-bottom:14px;
+}
+
+.card-image img{
+  width:110px;
+  height:110px;
+
+  object-fit:cover;
+
+  border-radius:50%;
+
+  padding:4px;
+
+  background:#fff;
+
+  border:4px solid rgba(255,255,255,0.15);
+
+  transition:0.5s;
+
+  box-shadow:
+  0 0 18px rgba(255,119,0,0.35),
+  0 0 30px rgba(255,0,128,0.18);
+}
+
+.card:hover .card-image img{
+  transform:scale(1.08) rotate(2deg);
+}
+
+/* CONTENT */
+
+.card-content{
+  text-align:center;
+}
+
+.card-content h2{
+  font-size:24px;
+  font-weight:700;
+  margin-bottom:5px;
+
+  background:linear-gradient(to right,#ffb067,#ff4fb4);
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.card-content h3{
+  font-size:13px;
+  color:#cbd5e1;
+  margin-bottom:14px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+/* LINE */
+
+.line{
+  width:70px;
+  height:4px;
+
+  border-radius:20px;
+
+  margin:0 auto 15px;
+
+  background:linear-gradient(to right,#ff7700,#ff0080);
+}
+
+/* MESSAGE */
+
+.card-content p{
+  font-size:13px;
+  line-height:1.7;
+  color:#f1f5f9;
+  text-align:center;
+}
+
+/* SOCIAL */
+
+.social{
+  margin-top:18px;
+
+  display:flex;
+  justify-content:center;
+  gap:10px;
+}
+
+.social a{
+  width:38px;
+  height:38px;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:#fff;
+  text-decoration:none;
+
+  background:rgba(255,255,255,0.08);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  transition:0.4s;
+}
+
+.social a:hover{
+  transform:translateY(-5px) scale(1.1);
+
+  background:linear-gradient(45deg,#ff7700,#ff0080);
+
+  box-shadow:
+  0 0 18px rgba(255,119,0,0.5);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.section-title h1{
+  font-size:32px;
+}
+
+.section-title p{
+  font-size:14px;
+}
+
+.card{
+  min-height:auto;
+}
+
+.card-image img{
+  width:95px;
+  height:95px;
+}
+
+.card-content h2{
+  font-size:21px;
+}
+
+.card-content p{
+  font-size:12px;
+  line-height:1.6;
+}
+
+}
+
+/* =====================ABOUT US =========================================== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family:'Poppins',sans-serif;
+  background:
+  linear-gradient(
+  135deg,
+  #0f172a,
+  #1e293b
+  );
+  overflow-x:hidden;
+}
+/* ================= SECTION ================= */
+.about-us-section{
+  width:100%;
+  min-height:50vh;
+  padding:60px 20px;
+  background:
+  linear-gradient(
+  135deg,
+  #0f172a,
+  #1e293b
+  );
+ overflow:hidden;
+  display:flex;
+  align-items:center;
+}
+/* ================= WRAPPER ================= */
+.about-wrapper{
+  max-width:1250px;
+  width:100%;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
+  flex-wrap:wrap;
+}
+/* ================= LEFT SIDE ================= */
+.about-left{
+  position:relative;
+  flex:1 1 420px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+/* GLOW BORDER */
+.image-border{
+  position:absolute;
+  width:320px;
+  height:420px;
+  border-radius:30px;
+  background:
+  linear-gradient(
+  135deg,
+  #ff7700,
+  #ff0080
+  );
+  transform:rotate(-5deg);
+  box-shadow:
+  0 0 35px rgba(255,119,0,0.35),
+  0 0 55px rgba(255,0,128,0.22);
+}
+/* IMAGE */
+.about-left img{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:320px;
+  height:420px;
+  object-fit:cover;
+  border-radius:28px;
+  border:4px solid rgba(255,255,255,0.12);
+  box-shadow:
+  0 15px 40px rgba(0,0,0,0.45);
+  transition:0.5s;
+}
+.about-left img:hover{
+  transform:
+  translateY(-8px)
+  scale(1.02);
+}
+/* FLOATING BOX */
+.floating-box{
+  position:absolute;
+  bottom:15px;
+  right:5px;
+  z-index:3;
+  background:
+  linear-gradient(
+  135deg,
+  rgba(255,119,0,0.95),
+  rgba(255,0,128,0.92)
+  );
+  padding:15px 20px;
+  border-radius:18px;
+  color:#fff;
+  text-align:center;
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.35);
+  animation:floatBox 3s ease-in-out infinite;
+}
+.floating-box h3{
+  margin:0;
+  font-size:26px;
+  font-weight:800;
+}
+.floating-box span{
+
+  font-size:12px;
+  letter-spacing:1px;
+}
+/* ================= RIGHT SIDE ================= */
+.about-right{
+  flex:1 1 550px;
+}
+/* SMALL TAG */
+.about-tag{
+  display:inline-block;
+  padding:8px 20px;
+  border-radius:50px;
+  background:
+  linear-gradient(
+  90deg,
+  #ff7700,
+  #ff0080
+  );
+  color:#fff;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:2px;
+  margin-bottom:20px;
+  box-shadow:
+  0 5px 20px rgba(255,119,0,0.25);
+}
+/* HEADING */
+.about-right h2{
+  font-size:42px;
+  line-height:1.2;
+  font-weight:800;
+  margin-bottom:18px;
+  background:
+  linear-gradient(
+  to right,
+  #ffffff,
+  #ffb067,
+  #ff4fb4
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+/* LINE */
+.line{
+  width:100px;
+  height:4px;
+  border-radius:20px;
+  background:
+  linear-gradient(
+  90deg,
+  #ff7700,
+  #ff0080
+  );
+  margin-bottom:24px;
+}
+/* TEXT */
+.about-right p{
+  color:#d1d5db;
+  font-size:15px;
+  line-height:1.8;
+  margin-bottom:15px;
+  text-align:justify;
+}
+/* ================= ANIMATION ================= */
+@keyframes floatBox{
+  0%{
+    transform:translateY(0px);
+  }
+  50%{
+    transform:translateY(-10px);
+  }
+  100%{
+    transform:translateY(0px);
+  }
+}
+/* ================= RESPONSIVE ================= */
+@media(max-width:992px){
+  .about-us-section{
+    min-height:auto;
+    padding:70px 20px;
+  }
+  .about-wrapper{
+    flex-direction:column;
+    text-align:center;
+  }
+  .about-right h2{
+    font-size:34px;
+  }
+  .line{
+    margin:auto auto 20px;
+  }
+  .about-right p{
+    text-align:center;
+  }
+  .about-btns{
+    justify-content:center;
+  }
+}
+/* MOBILE */
+@media(max-width:576px){
+  .about-us-section{
+    padding:60px 15px;
+  }
+  .image-border{
+    width:250px;
+    height:320px;
+  }
+  .about-left img{
+    max-width:250px;
+    height:320px;
+  }
+  .about-right h2{
+    font-size:26px;
+  }
+  .about-right p{
+    font-size:14px;
+    line-height:1.7;
+  }
+  .floating-box{
+    padding:12px 16px;
+  }
+  .floating-box h3{
+
+    font-size:22px;
+  }
+  .btn1,
+  .btn2{
+    width:100%;
+    text-align:center;
+  }
+}
+
+/* =================== affiliation-section========================================================  */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:
+  linear-gradient(135deg,#0f172a,#1e293b);
+  overflow-x:hidden;
+}
+
+.affiliation-section{
+  width:100%;
+  padding:90px 25px;
+  position:relative;
+  overflow:hidden;
+}
+
+/* BACKGROUND GLOW */
+
+.affiliation-section::before{
+  content:"";
+  position:absolute;
+  width:450px;
+  height:450px;
+  background:rgba(255,119,0,0.18);
+  border-radius:50%;
+  top:-180px;
+  left:-180px;
+  filter:blur(80px);
+}
+
+.affiliation-section::after{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  background:rgba(255,0,128,0.18);
+  border-radius:50%;
+  bottom:-180px;
+  right:-150px;
+  filter:blur(80px);
+}
+
+/* ================= TITLE ================= */
+
+.affiliation-title{
+  text-align:center;
+  font-size:52px;
+  font-weight:800;
+  margin-bottom:70px;
+  position:relative;
+  z-index:2;
+
+  background:
+  linear-gradient(to right,#ffb067,#ff0080,#ffffff);
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  letter-spacing:2px;
+}
+
+.affiliation-title::after{
+  content:"";
+  width:150px;
+  height:5px;
+
+  border-radius:50px;
+  background:
+  linear-gradient(to right,#ff7700,#ff0080);
+  display:block;
+  margin:16px auto 0;
+  box-shadow:
+  0 0 20px rgba(255,119,0,0.8),
+  0 0 35px rgba(255,0,128,0.8);
+}
+/* ================= CONTAINER ================= */
+.affiliation-container{
+  max-width:1350px;
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  gap:35px;
+  flex-wrap:wrap;
+  position:relative;
+  z-index:2;
+}
+/* ================= CARD ================= */
+.affiliation-card{
+  position:relative;
+  flex:1 1 320px;
+  max-width:360px;
+  min-height:370px;
+  text-decoration:none;
+  border-radius:32px;
+  overflow:hidden;
+  background:
+  linear-gradient(
+  145deg,
+  rgba(255,255,255,0.08),
+  rgba(255,255,255,0.03)
+  );
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  transition:0.5s ease;
+  box-shadow:
+  0 15px 35px rgba(0,0,0,0.3);
+}
+/* NEON BORDER */
+.affiliation-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:32px;
+  padding:2px;
+  background:
+  linear-gradient(
+  45deg,
+  #ff7700,
+  #ff0080,
+  #ff7700,
+  #ff0080
+  );
+  -webkit-mask:
+  linear-gradient(#000 0 0) content-box,
+  linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+}
+/* TOP LIGHT */
+.affiliation-card::after{
+  content:"";
+  position:absolute;
+  width:260px;
+  height:260px;
+  background:
+  radial-gradient(
+  rgba(255,255,255,0.18),
+  transparent 70%
+  );
+
+  top:-120px;
+  right:-90px;
+}
+/* HOVER */
+.affiliation-card:hover{
+  transform:
+  translateY(-18px)
+  scale(1.03);
+  box-shadow:
+  0 0 25px rgba(255,119,0,0.5),
+  0 0 50px rgba(255,0,128,0.35),
+  0 25px 45px rgba(0,0,0,0.4);
+}
+/* INNER */
+.card-inner{
+  position:relative;
+  z-index:2;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:35px 25px;
+}
+/* ================= LOGO BOX ================= */
+.logo-box{
+  width:230px;
+  height:180px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:28px;
+  background:
+  linear-gradient(
+  145deg,
+  rgba(255,255,255,0.12),
+  rgba(255,255,255,0.03)
+  );
+  border:1px solid rgba(255,255,255,0.08);
+  margin-bottom:30px;
+  transition:0.5s ease;
+  box-shadow:
+  inset 0 0 15px rgba(255,255,255,0.05);
+}
+/* IMAGE */
+.logo-box img{
+  width:100%;
+  max-width:190px;
+  height:120px;
+  object-fit:contain;
+  object-position:center;
+  transition:0.5s ease;
+  filter:
+  drop-shadow(0 0 12px rgba(255,255,255,0.18));
+}
+/* IMAGE HOVER */
+.affiliation-card:hover .logo-box{
+  transform:translateY(-8px);
+}
+.affiliation-card:hover .logo-box img{
+  transform:scale(1.12);
+}
+/* ================= TEXT ================= */
+.affiliation-card h4{
+  font-size:24px;
+  font-weight:700;
+  line-height:1.5;
+  text-align:center;
+  color:#fff;
+  transition:0.4s;
+}
+.affiliation-card:hover h4{
+  color:#ffb067;
+  letter-spacing:0.5px;
+}
+/* SMALL TEXT */
+.affiliation-card p{
+  margin-top:12px;
+  color:#d1d5db;
+  font-size:14px;
+  text-align:center;
+  line-height:1.7;
+}
+/* ICON */
+.open-icon{
+  margin-top:20px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+  linear-gradient(45deg,#ff7700,#ff0080);
+  color:#fff;
+  font-size:18px;
+  transition:0.4s;
+  box-shadow:
+  0 0 15px rgba(255,119,0,0.5);
+}
+.affiliation-card:hover .open-icon{
+  transform:
+  rotate(45deg)
+  scale(1.1);
+}
+/* ================= MOBILE ================= */
+@media(max-width:992px){
+.affiliation-title{
+  font-size:42px;
+}
+}
+@media(max-width:768px){
+.affiliation-section{
+  padding:70px 18px;
+}
+.affiliation-container{
+  gap:28px;
+}
+.affiliation-card{
+  max-width:100%;
+  min-height:340px;
+}
+.logo-box{
+  width:210px;
+  height:160px;
+}
+.logo-box img{
+  max-width:170px;
+  height:110px;
+}
+.affiliation-title{
+  font-size:34px;
+}
+.affiliation-card h4{
+  font-size:21px;
+}
+}
+@media(max-width:480px){
+.affiliation-title{
+  font-size:28px;
+}
+.logo-box{
+  width:180px;
+  height:140px;
+}
+.logo-box img{
+  max-width:150px;
+  height:95px;
+}
+.affiliation-card h4{
+  font-size:18px;
+}
+.affiliation-card p{
+  font-size:13px;
+}
+}
+
+/* =====================Teacher Card ================================== */
+/* ================= THEME BACKGROUND ================= */
+.ts-body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#0b1220;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* glowing background */
+.ts-body::before{
+  content:"";
+  position:fixed;
+  width:500px;
+  height:500px;
+  background:linear-gradient(45deg,#ff7a00,#ff3cac);
+  filter:blur(150px);
+  opacity:0.25;
+  top:-120px;
+  left:-120px;
+  z-index:-1;
+}
+
+/* ================= TITLE ================= */
+.ts-section-title{
+  text-align:center;
+  font-size:38px;
+  margin:50px 0 10px;
+  font-weight:700;
+  background:linear-gradient(90deg,#ff7a00,#ff3cac);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ================= WRAPPER ================= */
+.ts-wrapper{
+  width:92%;
+  max-width:1200px;
+  margin:60px auto;
+  position:relative;
+  padding:0 70px;
+  box-sizing:border-box;
+}
+
+/* ================= VIEWPORT ================= */
+.ts-viewport{
+  overflow:hidden;
+  border-radius:25px;
+}
+
+/* ================= SLIDER ================= */
+.ts-slider{
+  display:flex;
+  transition:0.6s ease;
+}
+
+/* ================= CARD FIX ================= */
+.ts-card{
+  flex:0 0 33.333%;
+  padding:15px;
+  box-sizing:border-box;
+}
+
+/* ================= CARD BOX ================= */
+.ts-card-box{
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,122,0,0.2);
+  border-radius:25px;
+  padding:25px;
+  text-align:center;
+  transition:0.4s;
+  box-shadow:0 10px 30px rgba(0,0,0,0.6);
+  position:relative;
+  overflow:hidden;
+}
+
+/* neon border glow */
+.ts-card-box::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:25px;
+  padding:2px;
+  background:linear-gradient(135deg,#ff7a00,#ff3cac);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+}
+
+/* IMAGE */
+.ts-card-box img{
+  width:135px;
+  height:135px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #ff7a00;
+  box-shadow:0 0 20px rgba(255,122,0,0.5);
+  transition:0.4s;
+}
+
+/* NAME */
+.ts-card-box h3{
+  margin:12px 0 5px;
+  font-size:18px;
+  color:#fff;
+}
+
+/* TEXT */
+.ts-card-box p{
+  font-size:14px;
+  color:#cbd5e1;
+}
+
+/* ICONS */
+.ts-icons{
+  margin-top:12px;
+}
+
+.ts-icons i{
+  margin:0 6px;
+  cursor:pointer;
+  color:#fff;
+  transition:0.3s;
+}
+
+.ts-icons i:hover{
+  color:#ff3cac;
+  transform:scale(1.2);
+}
+
+/* ================= HOVER EFFECT ================= */
+.ts-card-box:hover{
+  transform:translateY(-12px) scale(1.03);
+  box-shadow:0 0 30px rgba(255,122,0,0.3),
+             0 0 30px rgba(255,60,172,0.3);
+}
+
+.ts-card-box:hover img{
+  transform:scale(1.08);
+}
+
+/* ================= ARROWS ================= */
+.ts-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  border:none;
+  cursor:pointer;
+  font-size:22px;
+  z-index:100;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+  color:#fff;
+  transition:0.3s;
+}
+
+/* SAFE POSITION */
+.ts-left{ left:10px; }
+.ts-right{ right:10px; }
+
+.ts-arrow:hover{
+  background:linear-gradient(90deg,#ff7a00,#ff3cac);
+  color:#000;
+  transform:translateY(-50%) scale(1.1);
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px){
+  .ts-card{ flex:0 0 100%; }
+  .ts-wrapper{ padding:0 40px; }
+}
+
+</style>
+</head>
+<body>
+<!-- ================= TOP HEADER ================= -->
+<div class="top-header">
+  <div class="top-left">
+    <span>
+      <i class="fa-solid fa-phone"></i>
+      +91 9454700744
+    </span>
+    <span>
+      <i class="fa-solid fa-envelope"></i>
+      maashardacollegeofnursing@gmail.com
+    </span>
+  </div>
+  <div class="top-social">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</div>
+<!-- ================= MAIN HEADER ================= -->
+<div class="header">
+  <!-- LOGO -->
+  <div class="logo-box_1">
+    <img src="pic/Maa_Sharda_College_Of_Nursing_Allahabad png.png" alt="Logo">
+  </div>
+  <!-- TITLE -->
+  <div class="title">
+    <h1>
+      Maa Sharda College Of Nursing <br>
+      & Paramedical Science
+    </h1>
+    <h2>
+      Government Institute Of Medical Sciences
+    </h2>
+  </div>
+  <!-- BADGE -->
+  <div class="right-badge">
+    <div class="badge-box">
+      <h3>Admission Open</h3>
+      <p>Session 2026-27</p>
+    </div>
+  </div>
+</div>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg">
+<div class="container-fluid">
+<a class="navbar-brand" href="#">
+  <i class="fa-solid fa-graduation-cap"></i>
+  Maa Sharda
+</a>
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="index.html">
+<i class="fa-solid fa-house"></i>
+Home
+</a>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle"
+href="#"
+role="button"
+data-bs-toggle="dropdown">
+<i class="fa-solid fa-user-graduate"></i>
+About
+</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="about us.html">
+About Us
+</a>
+</li>
+<li>
+<a class="dropdown-item" href="news update.html">
+News Update
+</a>
+</li>
+<li>
+<a class="dropdown-item" href="Gallery.html">
+Gallery
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle"
+href="#"
+role="button"
+data-bs-toggle="dropdown">
+<i class="fa-solid fa-user-graduate"></i>
+Admissions
+</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="Associated Hospitals.html">
+Associated hospital 
+</a>
+</li>
+<li>
+<a class="dropdown-item" href="ragistration form.html">
+Admission Form
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="Facilities.html">
+<i class="fa-solid fa-book"></i>
+facility
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="course.html">
+<i class="fa-solid fa-laptop-medical"></i>
+Courses
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="Contact Us.html">
+<i class="fa-solid fa-address-book"></i>
+Contact
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- =================  home     SLIDER ========================================== -->
+<div class="slider">
+
+  <img id="slideImage" src="pic/1.jpeg" alt="Slide Image">
+
+  <!-- CAPTION -->
+  <div class="caption" id="caption"></div>
+
+  <!-- ARROWS -->
+  <div class="arrow left" onclick="prevSlide()">
+    <i class="fa-solid fa-chevron-left"></i>
+  </div>
+
+  <div class="arrow right" onclick="nextSlide()">
+    <i class="fa-solid fa-chevron-right"></i>
+  </div>
+
+</div>
+
+<!-- ================= NEWS ================= -->
+<div class="news">
+  <span>
+    🔥 Admissions Open 2026 |
+    Entrance Forms Available Now |
+    Limited Seats Available |
+    Apply Today
+  </span>
+</div>
+
+
+<!-- ================= Director  MESSAGE SECTION =========================================== -->
+
+<section class="message-section">
+
+  <!-- HEADING -->
+
+  <div class="section-title">
+    <h1>Message From Directors</h1>
+    <p>Leadership • Vision • Excellence • Innovation</p>
+  </div>
+
+  <!-- CARDS -->
+
+  <div class="cards-container">
+
+    <!-- CARD 1 -->
+
+    <div class="card">
+
+      <div class="card-image">
+        <img src="pic/director2.png" alt="Director">
+      </div>
+
+      <div class="card-content">
+
+        <h2>Mrs Priti Agrawal</h2>
+
+        <h3>Director</h3>
+
+        <div class="line"></div>
+
+        <p>
+          Maa Sharda College provides quality education with practical training and clinical exposure to develop skilled healthcare professionals.
+        </p>
+
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="card">
+
+      <div class="card-image">
+        <img src="pic/director1.png" alt="Director">
+      </div>
+
+      <div class="card-content">
+
+        <h2>Dr. R.K. Agrawal</h2>
+
+        <h3>Managing Director</h3>
+
+        <div class="line"></div>
+
+        <p>
+          Since 2013, our mission has been to empower students with confidence, leadership, knowledge, and ethical values.
+        </p>
+
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================== ABOUT SECTION ===================================== -->
+ <section class="about-us-section">
+  <div class="about-wrapper">
+    <!-- LEFT SIDE -->
+    <div class="about-left">
+      <div class="image-border"></div>
+      <img src="pic/maa_sharda_college (1).jpg" alt="Doctor">
+      <div class="floating-box">
+        <h3>13+</h3>
+        <span>Years Of Excellence</span>
+      </div>
+    </div>
+    <!-- RIGHT SIDE -->
+    <div class="about-right">
+      <span class="about-tag">
+        ABOUT US
+      </span>
+      <h2>
+        Excellence In Healthcare <br>
+        & Patient Care
+      </h2>
+      <div class="line"></div>
+      <p>
+        Our hospital is a leading healthcare provider in the region, committed to delivering world-class medical services to our patients. Equipped with state-of-the-art infrastructure and technology, we ensure our patients receive the best possible care.
+      </p>
+      <p>
+        Our team of highly skilled and experienced doctors and healthcare professionals are dedicated to providing personalized care to each and every patient. We strive to create a warm, welcoming environment for every patient.
+      </p>
+      <p>
+        We continuously invest in cutting-edge technology and innovative treatments to provide our patients with the best care possible while maintaining international healthcare standards.
+      </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== Teacher Card=================================== -->
+
+
+<body class="ts-body">
+
+<h2 class="ts-section-title">Our Teachers</h2>
+
+<div class="ts-wrapper" id="tsWrapper">
+
+<button class="ts-arrow ts-left" id="tsPrev">❮</button>
+
+<div class="ts-viewport">
+  <div class="ts-slider" id="tsSlider">
+
+    <div class="ts-card">
+      <div class="ts-card-box">
+        <img src="pic/Arvind Shrivastav Asso Professor.jpeg">
+        <h3>Arvind Shrivastav </h3>
+        <p>Associate Professor</p>
+      </div>
+    </div>
+
+    <div class="ts-card">
+      <div class="ts-card-box">
+        <img src="pic/Jesudian k Nath Associate Professor.jpeg">
+        <h3>Jesudian k Nath</h3>
+        <p>Psychiatric Nursing </p>
+      </div>
+    </div>
+
+    <div class="ts-card">
+      <div class="ts-card-box">
+        <img src="pic/Uday Kant Mishra Admin Straiter.jpeg">
+        <h3>Uday Kant Mishra</h3>
+        <p>Neurology Expert</p>
+      
+      </div>
+    </div>
+
+    <div class="ts-card">
+      <div class="ts-card-box">
+        <img src="pic/Pooja Devi Assistant Professor.jpeg">
+        <h3>Pooja Devi</h3>
+        <p>Assistant professor </p>
+        
+      </div>
+    </div>
+
+    <div class="ts-card">
+      <div class="ts-card-box">
+        <img src="pic/Pooja Singh Nursing Tutar.jpeg">
+        <h3>Pooja Singh</h3>
+        <p>nursing Tutor</p>
+        
+      </div>
+    </div>
+
+    <div class="ts-card">
+      <div class="ts-card-box">
+        <img src="pic/Ranjana Mishra Nursing Tutor.jpeg">
+        <h3>Ranjana Mishra</h3>
+        <p>Nursing Tutor</p>
+        
+      </div>
+    </div>
+
+    <div class="ts-card">
+      <div class="ts-card-box">
+        <img src="pic/Shikha Patel Nursing Tutor.jpeg">
+        <h3>Shikha Patel</h3>
+        <p>Nursing Tutor</p>
+        
+      </div>
+    </div>
+
+
+    <div class="ts-card">
+      <div class="ts-card-box">
+        <img src="pic/Sudha Patel Nursing Tutor.jpeg">
+        <h3>Sudha Patel</h3>
+        <p>Nursing Tutor</p>
+        
+      </div>
+    </div>
+
+    <div class="ts-card">
+      <div class="ts-card-box">
+        <img src="pic/Monika Gupta Nursing Tutor.jpeg">
+        <h3>Monika Gupta</h3>
+        <p>Nursing Tutor</p>
+        
+      </div>
+    </div>
+
+    <div class="ts-card">
+      <div class="ts-card-box">
+        <img src="pic/Anamika Singh Nursing Tutor.jpeg">
+        <h3>Anamika Singh</h3>
+        <p>Nursing Tutor</p>
+        
+      </div>
+    </div>
+
+    <div class="ts-card">
+      <div class="ts-card-box">
+        <img src="pic/Hema Singh.jpeg">
+        <h3>Hema Singh</h3>
+        <p>Nursing Tutor</p>
+        
+      </div>
+    </div>
+
+
+    <div class="ts-card">
+      <div class="ts-card-box">
+        <img src="pic/Pinki Shukla Nursing tutar.jpeg">
+        <h3>Pinki Shukla</h3>
+        <p>Nursing Tutor</p>
+        
+      </div>
+    </div>
+
+    <div class="ts-card">
+      <div class="ts-card-box">
+        <img src="pic/Anurag Singh Nursing Tutor  Clinical Instructor.jpeg">
+        <h3>Anurag Singh</h3>
+        <p>Nursing Tutor</p>
+        
+      </div>
+    </div>
+
+    <div class="ts-card">
+      <div class="ts-card-box">
+        <img src="pic/Mahinder Asst Professor.jpeg">
+        <h3>Mahinder</h3>
+        <p>Assistant professor</p>
+        
+      </div>
+    </div>
+    <div class="ts-card">
+      <div class="ts-card-box">
+        <img src="pic/Mariyum Bano Assistant Professor.jpeg">
+        <h3>Mariyum Bano</h3>
+        <p>Assistant professor </p>
+        
+      </div>
+    </div>
+
+    <div class="ts-card">
+      <div class="ts-card-box">
+        <img src="pic/Shalini Sharma Librarian.jpeg">
+        <h3>Shalini Sharma</h3>
+        <p>Librarian</p>
+        
+      </div>
+    </div>
+
+    <div class="ts-card">
+      <div class="ts-card-box">
+        <img src="pic/Saurabh Mashi Asst Professor.jpeg">
+        <h3>Saurabh Mashi</h3>
+        <p>Assistant professor </p>
+        
+      </div>
+    </div>
+
+    <div class="ts-card">
+      <div class="ts-card-box">
+        <img src="pic/Rajeshwar Yadav.jpeg">
+        <h3>Rajeshwar Yadav</h3>
+        <p>Nursing Tutor</p>
+        
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<button class="ts-arrow ts-right" id="tsNext">❯</button>
+
+</div>
+
+</body>
+<!-- ====================affiliation-section====================================== -->
+<section class="affiliation-section">
+  <h2 class="affiliation-title">
+    OUR AFFILIATIONS
+  </h2>
+  <div class="affiliation-container">
+    <!-- CARD 1 -->
+    <a href="https://upsmfac.org/"
+       target="_blank"
+       class="affiliation-card">
+      <div class="card-inner">
+        <div class="logo-box">
+          <img src="pic/up_state_medical_faculty.jpg" alt="">
+        </div>
+        <h4>
+          UP State Medical 
+        </h4>
+        <p>
+          Official Recognition & Educational Affiliation
+        </p>
+      </div>
+    </a>
+    <!-- CARD 2 -->
+    <a href="https://www.indiannursingcouncil.org/"
+       target="_blank"
+       class="affiliation-card">
+      <div class="card-inner">
+        <div class="logo-box">
+          <img src="pic/indian_nursing_council_logo.jpg" alt="">
+        </div>
+        <h4>
+          Indian Nursing Council
+        </h4>
+        <p>
+          National Nursing Education Approval Authority
+        </p>
+      </div>
+    </a>
+    <!-- CARD 3 -->
+    <a href="https://abvmuup.edu.in/"
+       target="_blank"
+       class="affiliation-card">
+      <div class="card-inner">
+        <div class="logo-box">
+          <img src="pic/atal_bihari_vajpayee_medical_university.jpg" alt="">
+        </div>
+        <h4>
+          ABV Medical University
+        </h4>
+        <p>
+          Advanced Medical & Healthcare Academic Partner
+        </p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- -----------------Footer code ----------------------------------------- -->
+
+<footer class="footer">
+
+  <!-- TOP LINE -->
+  <div class="footer-top-line"></div>
+
+  <!-- GRID -->
+  <div class="footer-grid"></div>
+
+  <!-- OVERLAY -->
+  <div class="footer-overlay"></div>
+
+  <!-- BLUR EFFECT -->
+  <div class="footer-blur blur1"></div>
+  <div class="footer-blur blur2"></div>
+  <div class="footer-blur blur3"></div>
+
+  <!-- PARTICLES -->
+  <div class="footer-particles">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </div>
+
+  <!-- CONTAINER -->
+  <div class="footer-container">
+
+    <!-- ABOUT -->
+    <div class="footer-box">
+
+      <h3>
+        <i class="fa-solid fa-hospital"></i>
+        About College
+      </h3>
+
+      <p>
+        We provide quality education and professional healthcare training at
+        Maa Sharda College of Nursing & Para Medical Sciences since 2013.
+        With experienced faculty, modern labs, practical exposure and a
+        green campus environment.
+      </p>
+
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-box">
+
+      <h3>
+        <i class="fa-solid fa-link"></i>
+        Quick Links
+      </h3>
+
+      <ul class="footer-links">
+
+        <li>
+          <a href="index.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="about us.html">
+            <i class="fa-solid fa-angle-right"></i>
+            About Us
+          </a>
+        </li>
+
+        <li>
+          <a href="course.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Courses
+          </a>
+        </li>
+
+        <li>
+          <a href="ragistration form.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Admission
+          </a>
+        </li>
+
+        <li>
+          <a href="Gallery.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Gallery
+          </a>
+        </li>
+
+        <li>
+          <a href="Contact Us.html">
+            <i class="fa-solid fa-angle-right"></i>
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-box footer-contact">
+
+      <h3>
+        <i class="fa-solid fa-address-book"></i>
+        Contact Info
+      </h3>
+
+      <p>
+        <i class="fa-solid fa-location-dot"></i>
+        Maa Sharda college of Nursing
+      </p>
+
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        +91 9643840096
+      </p>
+
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        maashardacollege@gmail.com
+      </p>
+
+      <!-- SOCIAL -->
+      <div class="social-icons">
+
+        <a href="#">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+
+    © 2026
+    <span>Maa Sharda Nursing College</span>
+    | Designed By Amrin Siddiqui
+
+  </div>
+
+
+<script>
+/* ================= SLIDES ================= */
+const slides = [
+{
+img:"pic/1 (1).jpg",
+text:[
+"WELCOME TO Maa Sharda College",
+"+91 9643840096, +91-120-2341738",
+"Modern Nursing Education",
+"Creating future healthcare professionals with innovation and excellence."
+]
+},
+
+{
+img:"pic/1 (2).jpg",
+text:[
+"Healthcare Excellence",
+"Top Medical College+",
+"Innovation & Compassion",
+"Leading students towards successful medical careers."
+]
+},
+
+{
+img:"pic/1 (3).jpg",
+text:[
+"Students in Action",
+"Practical Learning",
+"Growth & Development",
+"Hands-on training with modern facilities."
+]
+},
+
+{
+img:"pic/1 (4).jpg",
+text:[
+"Compassionate Care",
+"Advanced Facilities",
+"Dedicated Faculty",
+"Trusted institution for quality education."
+]
+}
+];
+
+let index = 0;
+
+const slideImage = document.getElementById("slideImage");
+const captionElement = document.getElementById("caption");
+
+let slideInterval;
+
+/* ================= UPDATE ================= */
+function updateSlide(){
+
+slideImage.src = slides[index].img;
+
+captionElement.innerHTML = `
+<div class="line1">${slides[index].text[0]}</div>
+
+<div class="line2">
+<i class="fa-solid fa-phone-volume"></i>
+${slides[index].text[1]}
+</div>
+
+<div class="line3">${slides[index].text[2]}</div>
+
+<div class="line4">${slides[index].text[3]}</div>
+
+<div class="hero-buttons">
+<a href="#" class="hero-btn primary">Apply Now</a>
+<a href="#" class="hero-btn secondary">Explore More</a>
+</div>
+`;
+
+}
+
+/* ================= NEXT ================= */
+function nextSlide(){
+index = (index + 1) % slides.length;
+updateSlide();
+resetInterval();
+}
+
+/* ================= PREV ================= */
+function prevSlide(){
+index = (index - 1 + slides.length) % slides.length;
+updateSlide();
+resetInterval();
+}
+
+/* ================= AUTO ================= */
+function startInterval(){
+slideInterval = setInterval(()=>{
+nextSlide();
+},5000);
+}
+
+/* ================= RESET ================= */
+function resetInterval(){
+clearInterval(slideInterval);
+startInterval();
+}
+
+/* ================= INIT ================= */
+updateSlide();
+startInterval();
+
+
+/* ================================= Teacher Slide ========================================== */
+
+const tsSlider = document.getElementById("tsSlider");
+const tsWrapper = document.getElementById("tsWrapper");
+const tsPrev = document.getElementById("tsPrev");
+const tsNext = document.getElementById("tsNext");
+
+let tsVisible = window.innerWidth <= 768 ? 1 : 3;
+let tsIndex = tsVisible;
+let tsAuto;
+
+/* clone */
+const tsOriginalHTML = tsSlider.innerHTML;
+tsSlider.innerHTML = tsOriginalHTML + tsOriginalHTML + tsOriginalHTML;
+
+/* update function */
+function tsUpdate(){
+  const tsCardWidth = tsSlider.children[0].offsetWidth;
+  tsSlider.style.transform = `translateX(-${tsIndex * tsCardWidth}px)`;
+}
+
+/* initial load */
+window.addEventListener("load", tsUpdate);
+
+window.addEventListener("resize", ()=>{
+  tsVisible = window.innerWidth <= 768 ? 1 : 3;
+  tsUpdate();
+});
+
+/* move */
+function tsMove(step){
+  tsIndex += step;
+  tsSlider.style.transition = "0.6s ease";
+  tsUpdate();
+}
+
+/* buttons */
+tsNext.onclick = ()=> tsMove(1);
+tsPrev.onclick = ()=> tsMove(-1);
+
+/* autoplay */
+function tsStartAuto(){
+  clearInterval(tsAuto);
+  tsAuto = setInterval(()=> tsMove(1), 2500);
+}
+
+/* pause on hover */
+tsWrapper.addEventListener("mouseenter", ()=> clearInterval(tsAuto));
+tsWrapper.addEventListener("mouseleave", tsStartAuto);
+
+/* smooth infinite loop */
+tsSlider.addEventListener("transitionend", ()=>{
+
+  const tsTotal = tsSlider.children.length;
+
+  if(tsIndex >= tsTotal - tsVisible){
+    tsSlider.style.transition = "none";
+    tsIndex = tsVisible;
+    tsUpdate();
+  }
+
+  if(tsIndex < tsVisible){
+    tsSlider.style.transition = "none";
+    tsIndex = tsTotal - (tsVisible * 2);
+    tsUpdate();
+  }
+
+});
+
+/* start */
+tsStartAuto();
+
+
+
+</script>
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
