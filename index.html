@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Maa Sharda college of Nursing</title>
-<link rel="stylesheet" href="pic/maa_sharda_college (1).jpg">
+<title>Maa Sharda college of Nursing | Prayagraj Official </title>
+
 <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -14,26 +14,15 @@
 <link rel="stylesheet" href="style.css">
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+
 <style>
 
 /* ================= GLOBAL ================= */
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
 
 html{
   scroll-behavior:smooth;
 }
 
-body{
-  font-family:'Poppins',sans-serif;
-  background:#0b1120;
-  overflow-x:hidden;
-}
 
 /* ================= TOP HEADER ================= */
 
@@ -580,7 +569,7 @@ body{
   padding:35px 20px;
 }
 
-.logo-box{
+.logo-box_1{
   display:flex;
   justify-content:center;
 }
@@ -618,7 +607,7 @@ body{
   font-size:26px;
 }
 
-.logo-box img{
+.logo-box_1 img{
   width:100px;
   height:100px;
 }
@@ -639,17 +628,6 @@ body{
 
 /* ==============home section============================= */
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  font-family:'Poppins',sans-serif;
-  background:#111;
-  overflow-x:hidden;
-}
 
 /* ================= SLIDER ================= */
 .slider{
@@ -845,12 +823,16 @@ body{
     height:85vh;
   }
 
-  .caption{
-    left:20px;
-    right:20px;
-    max-width:90%;
-  }
-
+.caption{
+  position:absolute;
+  top:50%;
+  left:7%;
+  transform:translateY(-50%);
+  color:#fff;
+  z-index:5;
+  width:90%;
+  max-width:700px;
+}
   .line1{
     font-size:40px;
     margin-bottom:15px;
@@ -897,18 +879,6 @@ body{
 
 }
 /* ================================= Director sir Massage ================================== */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  font-family:'Poppins',sans-serif;
-  background:linear-gradient(135deg,#0f172a,#1e293b);
-  overflow-x:hidden;
-  color:#fff;
-}
 
 /* SECTION */
 
@@ -916,6 +886,7 @@ body{
   width:100%;
   padding:70px 20px;
   position:relative;
+  overflow:hidden;
 }
 
 /* GLOW EFFECT */
@@ -929,7 +900,7 @@ body{
   border-radius:50%;
   top:-120px;
   left:-120px;
-  filter:blur(30px);
+  filter:blur(35px);
 }
 
 .message-section::after{
@@ -941,7 +912,7 @@ body{
   border-radius:50%;
   bottom:-120px;
   right:-120px;
-  filter:blur(30px);
+  filter:blur(35px);
 }
 
 /* HEADING */
@@ -950,22 +921,22 @@ body{
   position:relative;
   z-index:2;
   text-align:center;
-  margin-bottom:45px;
+  margin-bottom:50px;
 }
 
 .section-title h1{
-  font-size:44px;
+  font-size:46px;
   font-weight:800;
   background:linear-gradient(to right,#ff7700,#ff0080,#ffffff);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
 .section-title p{
   color:#cbd5e1;
   font-size:15px;
-  letter-spacing:1px;
+  letter-spacing:2px;
 }
 
 /* CONTAINER */
@@ -974,12 +945,14 @@ body{
   position:relative;
   z-index:2;
 
+  max-width:1100px;
+  margin:auto;
+
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
   gap:30px;
 
-  max-width:1000px;
-  margin:auto;
+  overflow:hidden;
 }
 
 /* CARD */
@@ -989,19 +962,20 @@ body{
 
   background:rgba(255,255,255,0.07);
 
-  backdrop-filter:blur(12px);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
 
   border:1px solid rgba(255,255,255,0.12);
 
   border-radius:28px;
 
-  padding:22px 20px;
+  padding:28px 22px;
 
   overflow:hidden;
 
   transition:0.5s ease;
 
-  min-height:34vh;
+  min-height:420px;
 }
 
 /* TOP BORDER */
@@ -1019,7 +993,7 @@ body{
 /* HOVER EFFECT */
 
 .card:hover{
-  transform:translateY(-12px) scale(1.02);
+  transform:translateY(-10px);
 
   box-shadow:
   0 18px 40px rgba(0,0,0,0.4),
@@ -1032,12 +1006,12 @@ body{
 .card-image{
   display:flex;
   justify-content:center;
-  margin-bottom:14px;
+  margin-bottom:18px;
 }
 
 .card-image img{
-  width:110px;
-  height:110px;
+  width:115px;
+  height:115px;
 
   object-fit:cover;
 
@@ -1057,7 +1031,7 @@ body{
 }
 
 .card:hover .card-image img{
-  transform:scale(1.08) rotate(2deg);
+  transform:scale(1.06);
 }
 
 /* CONTENT */
@@ -1067,9 +1041,9 @@ body{
 }
 
 .card-content h2{
-  font-size:24px;
+  font-size:25px;
   font-weight:700;
-  margin-bottom:5px;
+  margin-bottom:6px;
 
   background:linear-gradient(to right,#ffb067,#ff4fb4);
 
@@ -1080,7 +1054,7 @@ body{
 .card-content h3{
   font-size:13px;
   color:#cbd5e1;
-  margin-bottom:14px;
+  margin-bottom:16px;
   text-transform:uppercase;
   letter-spacing:1px;
 }
@@ -1088,12 +1062,12 @@ body{
 /* LINE */
 
 .line{
-  width:70px;
+  width:75px;
   height:4px;
 
   border-radius:20px;
 
-  margin:0 auto 15px;
+  margin:0 auto 18px;
 
   background:linear-gradient(to right,#ff7700,#ff0080);
 }
@@ -1101,8 +1075,8 @@ body{
 /* MESSAGE */
 
 .card-content p{
-  font-size:13px;
-  line-height:1.7;
+  font-size:14px;
+  line-height:1.8;
   color:#f1f5f9;
   text-align:center;
 }
@@ -1110,16 +1084,16 @@ body{
 /* SOCIAL */
 
 .social{
-  margin-top:18px;
+  margin-top:22px;
 
   display:flex;
   justify-content:center;
-  gap:10px;
+  gap:12px;
 }
 
 .social a{
-  width:38px;
-  height:38px;
+  width:40px;
+  height:40px;
 
   border-radius:50%;
 
@@ -1138,7 +1112,7 @@ body{
 }
 
 .social a:hover{
-  transform:translateY(-5px) scale(1.1);
+  transform:translateY(-5px);
 
   background:linear-gradient(45deg,#ff7700,#ff0080);
 
@@ -1150,16 +1124,27 @@ body{
 
 @media(max-width:768px){
 
+.message-section{
+  padding:55px 16px;
+}
+
 .section-title h1{
   font-size:32px;
 }
 
 .section-title p{
-  font-size:14px;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.cards-container{
+  grid-template-columns:1fr;
+  gap:22px;
 }
 
 .card{
   min-height:auto;
+  padding:24px 18px;
 }
 
 .card-image img{
@@ -1168,33 +1153,21 @@ body{
 }
 
 .card-content h2{
-  font-size:21px;
+  font-size:22px;
 }
 
 .card-content p{
-  font-size:12px;
-  line-height:1.6;
+  font-size:13px;
+  line-height:1.7;
+}
+
+.social a{
+  width:36px;
+  height:36px;
 }
 
 }
-
 /* =====================ABOUT US =========================================== */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-body{
-  font-family:'Poppins',sans-serif;
-  background:
-  linear-gradient(
-  135deg,
-  #0f172a,
-  #1e293b
-  );
-  overflow-x:hidden;
-}
-/* ================= SECTION ================= */
 .about-us-section{
   width:100%;
   min-height:50vh;
@@ -1425,18 +1398,6 @@ body{
 
 /* =================== affiliation-section========================================================  */
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  font-family:'Poppins',sans-serif;
-  background:
-  linear-gradient(135deg,#0f172a,#1e293b);
-  overflow-x:hidden;
-}
 
 .affiliation-section{
   width:100%;
@@ -1785,7 +1746,7 @@ body{
 
 /* ================= CARD FIX ================= */
 .ts-card{
-  flex:0 0 33.333%;
+  flex:0 0 calc(100% / 3);
   padding:15px;
   box-sizing:border-box;
 }
@@ -1973,11 +1934,13 @@ data-bs-target="#navbarNav">
 <i class="fa-solid fa-house"></i>
 Home
 </a>
+</li>
 <li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle"
 href="#"
 role="button"
 data-bs-toggle="dropdown">
+</li>
 <i class="fa-solid fa-user-graduate"></i>
 About
 </a>
@@ -2046,7 +2009,7 @@ Contact
 <!-- =================  home     SLIDER ========================================== -->
 <div class="slider">
 
-  <img id="slideImage" src="pic/1.jpeg" alt="Slide Image">
+  <img id="slideImage" src="" alt="Slide Image">
 
   <!-- CAPTION -->
   <div class="caption" id="caption"></div>
@@ -2186,16 +2149,15 @@ Contact
       </p>
       </div>
     </div>
-  </div>
 </section>
 
 
 <!-- ==================== Teacher Card=================================== -->
 
 
-<body class="ts-body">
+<section class="ts-body">
 
-<h2 class="ts-section-title">Our Teachers</h2>
+<h2 class="ts-section-title">Our Faculty</h2>
 
 <div class="ts-wrapper" id="tsWrapper">
 
@@ -2373,7 +2335,7 @@ Contact
 
 </div>
 
-</body>
+</section>
 <!-- ====================affiliation-section====================================== -->
 <section class="affiliation-section">
   <h2 class="affiliation-title">
@@ -2621,7 +2583,7 @@ text:[
 },
 
 {
-img:"pic/1 (3).jpg",
+img:"pic/1 (6).jpg",
 text:[
 "Students in Action",
 "Practical Learning",
@@ -2650,7 +2612,6 @@ let slideInterval;
 
 /* ================= UPDATE ================= */
 function updateSlide(){
-
 slideImage.src = slides[index].img;
 
 captionElement.innerHTML = `
@@ -2771,9 +2732,7 @@ tsSlider.addEventListener("transitionend", ()=>{
     tsIndex = tsTotal - (tsVisible * 2);
     tsUpdate();
   }
-
 });
-
 /* start */
 tsStartAuto();
 
